@@ -38,6 +38,7 @@
   var SIDING = ["Lap / wood siding", "Fiber cement", "Hardboard / masonite", "Stucco", "Brick", "Vinyl", "Aluminum", "Log", "Block", "Mixed"];
   var SCRAPE = [["none", "None needed", 0], ["min", "Minimal", R.ext_scrape_min], ["med", "Medium", R.ext_scrape_med], ["full", "Full / heavy", R.ext_scrape_full]];
 
+  function API() { return window.PHL || window.DPC || window.PH_FORM_API || null; }
   function $(s, r) { return (r || document).querySelector(s); }
   function $$(s, r) { return [].slice.call((r || document).querySelectorAll(s)); }
   function el(h) { var d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstChild; }
@@ -461,7 +462,8 @@
       fd.append('proposal_link', location.origin + '/proposal/#' + encodeState());
       if (blob) fd.append('proposal_pdf', new File([blob], 'proposal-' + (S.ref || 'ph') + '.pdf', { type: 'application/pdf' }));
       fd.append('pdf_attached', blob ? 'yes' : 'no, use the proposal link');
-      return (window.PHL && PHL.send) ? PHL.send(fd, 'PROPOSAL ' + (S.sig.data ? 'SIGNED' : 'sent') + ' ' + (S.ref || '') + ': ' + S.client.name) : Promise.resolve('fail');
+      var api = API();
+      return (api && api.send) ? api.send(fd, 'PROPOSAL ' + (S.sig.data ? 'SIGNED' : 'sent') + ' ' + (S.ref || '') + ': ' + S.client.name) : Promise.resolve('fail');
     }).then(function (state) {
       btn.disabled = false; btn.textContent = label;
       if (state === 'ok') { msgBox.className = 'es-msg ok'; msgBox.innerHTML = 'Sent. A copy went to the office and to ' + esc(S.client.email) + '. If the PDF could not be built on this device, the email still carries the full proposal and a link to it.'; }
