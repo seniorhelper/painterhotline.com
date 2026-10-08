@@ -1,0 +1,308 @@
+<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cabinet Refinishing Crew | Sprayed Finish | Painter Hotline</title><meta name="description" content="Our cabinet crew sprays every day. Degreased, sanded, bonding primed and sprayed to a factory-smooth finish for a fraction of replacement cost."><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><link rel="canonical" href="https://painterhotline.com/cabinet-refinishing/"><link rel="icon" type="image/png" href="/images/painter-hotline-favicon.png"><link rel="apple-touch-icon" href="/images/painter-hotline-favicon.png"><meta name="theme-color" content="#14161d"><meta property="og:type" content="website"><meta property="og:url" content="https://painterhotline.com/cabinet-refinishing/"><meta property="og:title" content="Cabinet Refinishing Crew | Sprayed Finish | Painter Hotline"><meta property="og:description" content="Our cabinet crew sprays every day. Degreased, sanded, bonding primed and sprayed to a factory-smooth finish for a fraction of replacement cost."><meta property="og:image" content="https://painterhotline.com/images/ph-crew-cabinet-spray.jpeg"><meta property="og:site_name" content="Painter Hotline"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cabinet Refinishing Crew | Sprayed Finish | Painter Hotline"><meta name="twitter:description" content="Our cabinet crew sprays every day. Degreased, sanded, bonding primed and sprayed to a factory-smooth finish for a fraction of replacement cost."><meta name="twitter:image" content="https://painterhotline.com/images/ph-crew-cabinet-spray.jpeg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><style>
+:root{
+ --ink:#14161d;--ink-2:#1e212b;--char:#2b3040;--slate:#4a5161;--grey:#6d7587;
+ --flame:#ff5a1f;--flame-d:#c33a09;--flame-l:#ffb48f;
+ --sky:#1f6feb;--mint:#17b890;--sun:#ffc244;
+ --paper:#fdfcfa;--chalk:#f4f1ec;--line:#e3dfd8;--white:#fff;
+ --fd:'Syne',system-ui,sans-serif;--fb:'Instrument Sans',system-ui,-apple-system,sans-serif;
+ --max:1300px;--rad:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--fb);font-size:1.05rem;line-height:1.7;color:var(--slate);background:var(--paper);overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--fd);color:var(--ink);line-height:1.05;font-weight:800;letter-spacing:-.025em}
+h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem)}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
+p{margin-bottom:1.05rem}
+a{color:var(--flame-d);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+strong{color:var(--ink);font-weight:600}
+.hero strong,.s.dark strong,.ask strong,.rail strong,.ft strong,.bar strong{color:#fff}
+.w{max-width:var(--max);margin:0 auto;padding:0 26px;min-width:0}
+.narrow{max-width:min(76ch,100%);margin:0 auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:10px;top:10px;z-index:999;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px}
+
+/* ---------- paint effects ---------- */
+/* brush-stroke highlight behind a word */
+.stroke{position:relative;display:inline-block;color:#fff;padding:0 .18em}
+.stroke::before{content:"";position:absolute;inset:-.06em -.1em;background:var(--flame-d);
+ border-radius:4px 10px 6px 12px/10px 5px 12px 6px;transform:rotate(-1.1deg) scaleX(0);transform-origin:left center;z-index:-1;
+ animation:sweep .8s cubic-bezier(.2,.8,.3,1) .25s forwards}
+@keyframes sweep{to{transform:rotate(-1.1deg) scaleX(1)}}
+/* drip divider */
+.drip{position:relative;height:28px;background:var(--ink)}
+.drip::after{content:"";position:absolute;top:100%;left:0;right:0;height:26px;
+ background:radial-gradient(circle at 10px -4px,var(--ink) 11px,transparent 12px),
+            radial-gradient(circle at 56px -9px,var(--ink) 15px,transparent 16px),
+            radial-gradient(circle at 112px -6px,var(--ink) 9px,transparent 10px),
+            radial-gradient(circle at 170px -12px,var(--ink) 13px,transparent 14px);
+ background-size:210px 26px;background-repeat:repeat-x}
+/* roller wipe reveal */
+.wipe{clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.65,0,.35,1)}
+.wipe.on{clip-path:inset(0 0 0 0)}
+/* rise in */
+.rise{opacity:0;transform:translateY(26px);transition:opacity .66s cubic-bezier(.2,.75,.3,1),transform .66s cubic-bezier(.2,.75,.3,1)}
+.rise.on{opacity:1;transform:none}
+.d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}.d4{transition-delay:.36s}
+/* splatter dots */
+.splat{position:absolute;border-radius:50%;opacity:.14;pointer-events:none}
+@media (prefers-reduced-motion:reduce){
+ .rise,.wipe{opacity:1;transform:none;clip-path:none;transition:none}
+ .stroke::before{animation:none;transform:rotate(-1.1deg) scaleX(1)}
+ *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+
+/* ---------- header ---------- */
+.bar{background:var(--ink);color:#cfd4df;font-size:.86rem}
+.bar .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.bar b{color:var(--sun)}
+.hd{position:sticky;top:0;z-index:90;background:rgba(253,252,250,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.hd-in{max-width:var(--max);margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.logo img{width:50px;height:50px;object-fit:contain}
+.logo b{display:block;font:800 1.2rem var(--fd);color:var(--ink);letter-spacing:-.03em;line-height:1}
+.logo i{display:block;font-style:normal;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--flame-d);font-weight:700;margin-top:3px}
+.nv{display:flex;gap:3px;margin-left:auto;align-items:center}
+.nv>a,.mg>button{font:600 .93rem var(--fb);color:var(--ink);background:none;border:0;cursor:pointer;text-decoration:none;padding:10px 13px;border-radius:9px}
+.nv>a:hover,.mg>button:hover{background:var(--chalk);color:var(--flame-d)}
+.nv>a[aria-current]{background:var(--chalk);color:var(--flame-d)}
+.mg{position:relative}
+.mg-p{position:absolute;top:46px;left:0;min-width:290px;background:#fff;border:1px solid var(--line);border-radius:var(--rad);box-shadow:0 22px 50px rgba(20,22,29,.16);padding:9px;display:none;z-index:95}
+.mg[data-o] .mg-p{display:block}
+.mg-p a{display:block;padding:11px 13px;border-radius:9px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+.mg-p a:hover{background:var(--chalk);color:var(--flame-d)}
+.mg-p .hint{display:block;font-size:.8rem;color:var(--grey);font-weight:400;margin-top:1px}
+.callbtn{display:inline-flex;align-items:center;gap:9px;background:var(--flame-d);color:#fff;padding:11px 20px;border-radius:999px;text-decoration:none;font:700 .98rem var(--fb);white-space:nowrap}
+.callbtn:hover{background:#9c2d06;color:#fff}
+.bg{display:none;background:none;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;margin-left:auto}
+.bg i{display:block;width:21px;height:2px;background:var(--ink);margin:4.5px 0}
+.dr{display:none;border-top:1px solid var(--line);background:#fff;padding:10px 26px 22px;max-height:76vh;overflow-y:auto}
+.dr.on{display:block}
+.dr a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}
+.dr a.s{padding-left:15px;font-weight:500;color:var(--slate);font-size:.95rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:#d8dce6;overflow:hidden}
+.hero-in{position:relative;z-index:3;max-width:var(--max);margin:0 auto;padding:84px 26px 92px;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
+.hero h1{color:#fff}
+.hero p.sub{font-size:1.16rem;color:#aeb6c6;max-width:52ch;margin:20px 0 30px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 .78rem var(--fb);letter-spacing:.18em;text-transform:uppercase;color:var(--sun);margin-bottom:20px}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--flame);border-radius:2px}
+.hero-art{position:relative;min-height:400px}
+.hero-art img{width:100%;height:420px;object-fit:cover;border-radius:var(--rad);position:relative;z-index:2}
+.hero-art::after{content:"";position:absolute;right:-18px;bottom:-18px;width:150px;height:150px;background:var(--flame);border-radius:var(--rad);z-index:1}
+.acts{display:flex;gap:13px;flex-wrap:wrap}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 1.02rem var(--fb);padding:15px 27px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s}
+.b:active{transform:translateY(1px)}
+.b-f{background:var(--flame-d);color:#fff;border-color:var(--flame-d)}
+.b-f:hover{background:#9c2d06;color:#fff}
+.b-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.b-w:hover{background:#fff;color:var(--ink)}
+.b-i{background:var(--ink);color:#fff;border-color:var(--ink)}
+.b-i:hover{background:var(--char);color:#fff}
+.b-o{background:#fff;color:var(--ink);border-color:var(--ink)}
+.b-o:hover{background:var(--chalk)}
+.hero-strip{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,.12)}
+.hero-strip .w{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.hero-strip div{padding:22px 18px;border-right:1px solid rgba(255,255,255,.12)}
+.hero-strip div:last-child{border-right:0}
+.hero-strip b{display:block;font:800 1.5rem var(--fd);color:#fff;line-height:1}
+.hero-strip span{display:block;font-size:.88rem;color:#9aa3b4;margin-top:5px}
+
+/* ---------- sections ---------- */
+.s{padding:76px 0;position:relative}
+.s.chalk{background:var(--chalk)}
+.s.dark{background:var(--ink);color:#c3c9d6}
+.s.dark h2,.s.dark h3{color:#fff}
+.s.dark a:not(.b):not(.pill):not(.crew),.ask a:not(.b),.hero a:not(.b),.rail a:not(.b){color:var(--sun)}
+.s.dark a:not(.b):hover,.ask a:not(.b):hover,.hero a:not(.b):hover,.rail a:not(.b):hover{color:#fff}
+.b-f,.b-f:hover,.b-i,.b-i:hover{color:#fff}
+.s.dark .kick,.ask .kick,.hero .kick{color:var(--sun)}
+.kick{display:block;font:700 .77rem var(--fb);letter-spacing:.19em;text-transform:uppercase;color:var(--flame-d);margin-bottom:12px}
+.lede{font-size:1.14rem;max-width:62ch;margin-top:14px}
+
+/* answer box */
+.ab{background:#fff;border:1px solid var(--line);border-left:6px solid var(--flame);border-radius:0 var(--rad) var(--rad) 0;padding:24px 28px;box-shadow:0 10px 30px rgba(20,22,29,.05)}
+.ab p{margin:0;font-size:1.06rem;color:var(--ink)}
+.s.chalk .ab{background:var(--paper)}
+
+/* crew cards */
+.crews{display:grid;grid-template-columns:repeat(auto-fit,minmax(282px,1fr));gap:20px}
+.crew{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:28px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .22s,box-shadow .22s}
+.crew::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c,var(--flame));transition:width .28s}
+.crew:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(20,22,29,.13)}
+.crew:hover::before{width:100%;opacity:.07}
+.crew .tag{display:inline-block;font:700 .72rem var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--c,var(--flame-d));margin-bottom:9px}
+.crew h3{margin-bottom:8px}
+.crew p{font-size:.97rem;margin:0;color:var(--slate)}
+.crew .go{display:inline-block;margin-top:14px;font:700 .9rem var(--fb);color:var(--ink)}
+.crew:hover .go{color:var(--c,var(--flame-d))}
+
+/* split */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:50px;align-items:start}
+.copy h2{margin:34px 0 13px}
+.copy h2:first-child{margin-top:0}
+.copy h3{margin:26px 0 9px}
+.copy ul,.copy ol{margin:0 0 17px 22px}
+.copy li{margin-bottom:8px}
+.copy>ul>li::marker{color:var(--flame)}
+.rail{position:sticky;top:106px;background:var(--ink);color:#c3c9d6;border-radius:var(--rad);padding:26px}
+.rail h3{color:#fff;margin-bottom:10px}
+.rail p{font-size:.95rem}
+.rail .b{width:100%;margin-top:10px}
+
+/* table */
+.tw{overflow-x:auto;max-width:100%;min-width:0;margin:22px 0;border:1px solid var(--line);border-radius:var(--rad);background:#fff}
+.tw table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:540px}
+.tw caption{text-align:left;padding:13px 16px;font-size:.87rem;color:var(--grey);background:var(--chalk);border-bottom:1px solid var(--line)}
+.tw th{background:var(--ink);color:#fff;text-align:left;font:700 .78rem var(--fb);letter-spacing:.1em;text-transform:uppercase;padding:13px 16px}
+.tw td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--slate)}
+.s.dark .tw,.s.dark .tw td,.s.dark .tw caption{color:var(--slate)}
+.s.dark .tw td strong{color:var(--ink)}
+.tw tr:last-child td{border-bottom:0}
+.tw tbody tr:nth-child(even){background:#fbfaf7}
+
+/* faq */
+.fq details{background:#fff;border:1px solid var(--line);border-radius:var(--rad);margin-bottom:11px;overflow:hidden}
+.fq details[open]{border-color:var(--flame-l);box-shadow:0 10px 28px rgba(20,22,29,.07)}
+.fq summary{cursor:pointer;list-style:none;padding:19px 56px 19px 22px;font:700 1.06rem var(--fd);color:var(--ink);position:relative;letter-spacing:-.01em}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"";position:absolute;right:22px;top:50%;width:12px;height:12px;margin-top:-7px;border-right:2.5px solid var(--flame-d);border-bottom:2.5px solid var(--flame-d);transform:rotate(45deg);transition:transform .24s}
+.fq details[open] summary::after{transform:rotate(-135deg)}
+.fq .a{padding:0 22px 20px}
+.fq .a p:last-child{margin-bottom:0}
+
+/* forms */
+.ask{background:var(--ink);color:#c3c9d6;padding:72px 0}
+.ask h2{color:#fff}
+.ask-g{display:grid;grid-template-columns:.86fr 1.14fr;gap:46px;align-items:start}
+.card-f{background:#fff;border-radius:var(--rad);padding:28px;min-width:0}
+.rows{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1;min-width:0}
+.f label{font:600 .85rem var(--fb);color:var(--ink)}
+.f input,.f select,.f textarea{border:1.5px solid var(--line);border-radius:10px;padding:12px;font:1rem var(--fb);color:var(--ink);background:#fff;min-width:0;max-width:100%}
+.f input[type=file]{font-size:.9rem;padding:10px;width:100%;min-width:0}
+.f textarea{min-height:108px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--flame);box-shadow:0 0 0 3px rgba(255,90,31,.16)}
+.pot{position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none}
+.fine{font-size:.87rem;color:#95a0b3;margin-top:11px}
+.note{display:none;margin-top:13px;padding:13px 15px;border-radius:10px;font-weight:600}
+.note.ok{display:block;background:#e7f7ef;color:#126b45}
+.note.no{display:block;background:#fdeceb;color:#a32b1f}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 15px;border-radius:999px;font-size:.88rem;color:#dbe0ea}
+
+/* footer */
+.ft{background:var(--ink-2);color:#9aa3b4;padding:58px 0 0;font-size:.95rem}
+.ft a{color:#dde2ea;text-decoration:none}
+.ft a:hover{color:var(--sun)}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid #333848}
+.ft h3{color:#fff;font:700 .78rem var(--fb);letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+.ft ul{list-style:none}
+.ft li{margin-bottom:9px}
+.fe{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:20px 0;font-size:.87rem;color:#79out}
+.fe{color:#8f98a9}
+.heart-row{text-align:center;padding:16px 0 28px;font-size:.93rem;color:#9aa3b4}
+.heart{display:inline-block;color:#ff4d4d;font-size:1.2rem;animation:beat 2.4s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}48%{transform:scale(1.22)}}
+.map{border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;height:330px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.pill{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 17px;font:600 .92rem var(--fb);text-decoration:none;color:var(--ink);transition:.18s}
+.pill:hover{border-color:var(--flame);background:var(--flame);color:#fff}
+.bc{font-size:.85rem;color:var(--grey);padding:16px 0 0}
+.bc a{color:var(--grey)}
+.dock{position:fixed;left:0;right:0;bottom:0;display:none;z-index:88;background:var(--ink);border-top:3px solid var(--flame)}
+.dock a{flex:1;text-align:center;padding:15px 8px;color:#fff;text-decoration:none;font:700 .95rem var(--fb)}
+.dock a.hot{background:var(--flame-d)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:24px}
+.gal img{width:100%;height:220px;object-fit:cover;border-radius:var(--rad)}
+@media (max-width:1080px){
+ .nv{display:none}.bg{display:block}.callbtn{display:none}
+ .hero-in{grid-template-columns:minmax(0,1fr);gap:34px;padding:58px 26px 64px}
+ .hero-art img{height:300px}
+ .hero-strip .w{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .hero-strip div{border-bottom:1px solid rgba(255,255,255,.12)}
+ .split{grid-template-columns:minmax(0,1fr);gap:34px}.rail{position:static}
+ .ask-g{grid-template-columns:minmax(0,1fr);gap:28px}
+ .fg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+ .hero-strip .w{grid-template-columns:minmax(0,1fr)}
+ .rows{grid-template-columns:minmax(0,1fr)}
+ .dock{display:flex}body{padding-bottom:58px}
+ .fg{grid-template-columns:minmax(0,1fr)}
+ .logo b{font-size:1.04rem}.logo img{width:42px;height:42px}
+ .s{padding:52px 0}
+ .hero-art::after{display:none}
+}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["HousePainter", "LocalBusiness"], "@id": "https://painterhotline.com/#biz", "name": "Painter Hotline", "url": "https://painterhotline.com/", "telephone": "+17202085645", "email": "quote@painterhotline.com", "logo": "https://painterhotline.com/images/painter-hotline-mark.png", "image": "https://painterhotline.com/images/ph-crew-exterior-work.jpg", "description": "Painter Hotline is a Colorado painting company organized into specialist crews: interior, exterior, kitchen cabinet refinishing, commercial, deck and fence staining, and specialty coatings. Fully insured with a written 5-year workmanship warranty and free virtual estimates returned within 24 hours.", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 39.7392, "longitude": -104.9903}, "areaServed": [{"@type": "State", "name": "Colorado"}, {"@type": "City", "name": "Denver, CO"}, {"@type": "City", "name": "Aurora, CO"}, {"@type": "City", "name": "Littleton, CO"}, {"@type": "City", "name": "Centennial, CO"}, {"@type": "City", "name": "Highlands Ranch, CO"}, {"@type": "City", "name": "Parker, CO"}, {"@type": "City", "name": "Castle Rock, CO"}, {"@type": "City", "name": "Thornton, CO"}, {"@type": "City", "name": "Westminster, CO"}, {"@type": "City", "name": "Longmont, CO"}, {"@type": "City", "name": "Breckenridge, CO"}, {"@type": "City", "name": "Fort Morgan, CO"}], "priceRange": "$$", "paymentAccepted": "Cash, Check, Credit Card", "currenciesAccepted": "USD", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "07:00", "closes": "19:00"}], "knowsAbout": ["Specialist painting crews", "Repairing failed paint jobs", "Cabinet spray finishing", "Elastomeric and specialty coatings", "Lead-safe work practices", "High-altitude coating failure", "Commercial phased painting", "HOA color approval", "Virtual painting estimates"], "makesOffer": {"@type": "Offer", "name": "25% off painting labor", "description": "25% off labor on painting projects booked by October 31, 2026. Paint and materials not included.", "availabilityStarts": "2026-10-01", "availabilityEnds": "2026-10-31", "url": "https://painterhotline.com/contact/"}, "potentialAction": {"@type": "RequestQuoteAction", "name": "Request a free virtual estimate", "target": {"@type": "EntryPoint", "urlTemplate": "https://painterhotline.com/virtual-estimate/", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}, "sameAs": ["https://denverpaintcontractors.com", "https://bouldercopainters.com", "https://paintingbrighton.com"]}, {"@type": "WebSite", "@id": "https://painterhotline.com/#site", "url": "https://painterhotline.com/", "name": "Painter Hotline", "publisher": {"@id": "https://painterhotline.com/#biz"}, "inLanguage": "en-US"}, {"@type": "WebPage", "@id": "https://painterhotline.com/cabinet-refinishing/#pg", "url": "https://painterhotline.com/cabinet-refinishing/", "name": "Cabinet Refinishing Crew | Sprayed Finish | Painter Hotline", "description": "Our cabinet crew sprays every day. Degreased, sanded, bonding primed and sprayed to a factory-smooth finish for a fraction of replacement cost.", "isPartOf": {"@id": "https://painterhotline.com/#site"}, "about": {"@id": "https://painterhotline.com/#biz"}, "primaryImageOfPage": "https://painterhotline.com/images/ph-crew-cabinet-spray.jpeg", "inLanguage": "en-US", "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".ab", ".fq summary", "h1"]}}, {"@type": "BreadcrumbList", "@id": "https://painterhotline.com/cabinet-refinishing/#bc", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://painterhotline.com/"}, {"@type": "ListItem", "position": 2, "name": "Cabinet crew", "item": "https://painterhotline.com/cabinet-refinishing/"}]}, {"@type": "FAQPage", "@id": "https://painterhotline.com/cabinet-refinishing/#faq", "mainEntity": [{"@type": "Question", "name": "How much does cabinet refinishing cost?", "acceptedAnswer": {"@type": "Answer", "text": "Published Front Range data puts professional cabinet refinishing at roughly $2,000 to $8,000 for a typical kitchen. Door and drawer-front count, whether boxes are included, and whether you want the oak grain filled drive the number."}}, {"@type": "Question", "name": "Is refinishing cheaper than replacing?", "acceptedAnswer": {"@type": "Answer", "text": "Substantially. Replacement commonly starts near $15,000 and runs past $30,000 for custom work, and it usually brings countertop replacement along with it. Refinishing leaves your counters in place."}}, {"@type": "Question", "name": "Can honey oak cabinets be painted white?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is the most requested cabinet project we get. The question to settle first is whether you want the oak grain visible or filled smooth. We will show you both on your own doors."}}, {"@type": "Question", "name": "Do you spray or brush?", "acceptedAnswer": {"@type": "Answer", "text": "Spray, always. Doors and drawer fronts are finished in a controlled area and boxes are sprayed in place behind containment. Brushed cabinets look brushed, which defeats the purpose."}}, {"@type": "Question", "name": "How long is my kitchen out of action?", "acceptedAnswer": {"@type": "Answer", "text": "Three to five days on site. You keep countertops and appliances throughout. Doors are off for most of it, so plan on open shelving for the week."}}, {"@type": "Question", "name": "Can you fix a cabinet job someone else did badly?", "acceptedAnswer": {"@type": "Answer", "text": "Usually. We assess whether the existing coating can be sanded and recoated or has to come back to bare, then rebuild the finish properly."}}]}, {"@type": "Service", "@id": "https://painterhotline.com/cabinet-refinishing/#svc", "name": "Cabinet painting in Colorado", "serviceType": "Cabinet", "provider": {"@id": "https://painterhotline.com/#biz"}, "areaServed": {"@type": "State", "name": "Colorado"}, "description": "Our cabinet crew sprays every day. Degreased, sanded, bonding primed and sprayed to a factory-smooth finish for a fraction of replacement cost."}]}</script></head><body data-h1="Zm9ybQ==" data-h2="c3VibWl0LmNv" data-u1="aW4=" data-u2="Zm8=" data-d1="ZXlldG9hZA==" data-d2="LmNvbQ=="><a class="skip" href="#main">Skip to content</a><div class="bar"><div class="w"><span>Colorado painting company &middot; specialist crews for every kind of work</span><span><b>25% off labor on projects booked by October 31, 2026</b> &middot; Paint and materials not included.</span></div></div><header class="hd"><div class="hd-in"><a class="logo" href="/" aria-label="Painter Hotline, home"><img src="/images/painter-hotline-mark.png" alt="Painter Hotline, a Colorado painting company" width="50" height="50" fetchpriority="high" decoding="async"><span><b>Painter Hotline</b><i>Colorado painting co.</i></span></a><nav class="nv" aria-label="Main"><div class="mg"><button type="button" aria-expanded="false" aria-current="true">Our crews</button><div class="mg-p"><a href="/interior-painting/">Interior crew</a><a href="/exterior-painting/">Exterior crew</a><a href="/cabinet-refinishing/" aria-current="page">Cabinet crew</a><a href="/commercial-painting/">Commercial crew</a><a href="/deck-and-fence-staining/">Deck &amp; fence crew</a><a href="/specialty-coatings/">Specialty coatings crew</a></div></div><div class="mg"><button type="button" aria-expanded="false">Start here</button><div class="mg-p"><a href="/virtual-estimate/">Virtual estimate<span class="hint">Photos in, written number back in 24 hours</span></a><a href="/walkthrough/">Two-minute walkthrough<span class="hint">See if we are the right company for your project</span></a><a href="/what-it-costs/">What it costs<span class="hint">Published 2026 ranges and what moves them</span></a></div></div><div class="mg"><button type="button" aria-expanded="false">More</button><div class="mg-p"><a href="/fix-a-bad-paint-job/">Fix a bad paint job</a><a href="/our-warranty/">The warranty</a><a href="/where-we-work/">Where we work</a><a href="/questions/">Questions</a><a href="/about/">Who we are</a></div></div><a href="/contact/">Contact</a></nav><a class="callbtn" href="tel:+17202085645">720-208-5645</a><button class="bg" id="bg" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button></div><div class="dr" id="dr"><a href="/">Home</a><a class="s" href="/interior-painting/">Interior crew</a><a class="s" href="/exterior-painting/">Exterior crew</a><a class="s" href="/cabinet-refinishing/">Cabinet crew</a><a class="s" href="/commercial-painting/">Commercial crew</a><a class="s" href="/deck-and-fence-staining/">Deck &amp; fence crew</a><a class="s" href="/specialty-coatings/">Specialty coatings crew</a><a class="s" href="/virtual-estimate/">Virtual estimate</a><a class="s" href="/walkthrough/">Two-minute walkthrough</a><a class="s" href="/what-it-costs/">What it costs</a><a class="s" href="/fix-a-bad-paint-job/">Fix a bad paint job</a><a class="s" href="/our-warranty/">The warranty</a><a class="s" href="/where-we-work/">Where we work</a><a class="s" href="/questions/">Questions</a><a class="s" href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="tel:+17202085645">Call 720-208-5645</a></div></header><main id="main"><div class="w"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Cabinet crew</nav></div><section class="hero"><div class="hero-in"><div><span class="eyebrow">The cabinet crew</span><h1>The crew that <span class="stroke">sprays</span> every single day.</h1><p class="sub">Cabinets are not walls. They need a different product, a different process and a controlled spray environment, which is exactly why they get their own crew.</p><div class="acts"><a class="b b-f" href="/virtual-estimate/">Get a virtual estimate</a><a class="b b-w" href="tel:+17202085645">Call 720-208-5645</a></div></div><div class="hero-art rise d1"><img src="/images/ph-crew-cabinet-spray.jpeg" alt="Cabinet crew at work in Colorado" width="900" height="700" fetchpriority="high" decoding="async"></div></div><div class="hero-strip"><div class="w"><div><b>$2-8k</b><span>typical vs $15k+ to replace</span></div><div><b>3-5 days</b><span>on site</span></div><div><b>Sprayed</b><span>never brushed</span></div><div><b>5 yr</b><span>written warranty</span></div></div></div></section><section class="s "><div class="w"><div class="narrow"><span class="kick">In short</span><div class="ab rise"><p>The <strong>Painter Hotline cabinet crew</strong> refinishes kitchen and bathroom cabinets across Colorado. Cabinets are degreased, scuff-sanded, primed with a bonding primer formulated for slick factory finishes and sprayed with a cabinet-grade topcoat. Doors and drawer fronts are sprayed in a controlled area while boxes are finished in place under containment. Published Front Range data puts cabinet refinishing at roughly $2,000 to $8,000 per kitchen against $15,000 to $30,000 or more for replacement.</p></div></div></div></section><section class="s "><div class="w"><div class="split"><div class="copy rise"><h2>Four steps, and every chipped cabinet job skipped one</h2>
+<ol>
+<li><strong>Degrease.</strong> Cabinets near a cooktop carry years of aerosolized cooking residue. No primer bonds through grease. This step is boring and non-negotiable.</li>
+<li><strong>Scuff sand.</strong> Factory finishes are deliberately slick so food wipes off. That same slickness rejects coatings. Sanding creates tooth.</li>
+<li><strong>Bonding primer.</strong> Not ordinary primer. A product formulated specifically to grip a cured factory finish.</li>
+<li><strong>Cabinet-grade topcoat.</strong> Wall paint never cures hard enough to survive fingernails and doors closing a hundred times a week.</li>
+</ol>
+<p>Every failed cabinet job we are called in to fix skipped at least one of those, usually two. The failure shows up at the edges within about a year, and correcting it costs more than doing it right would have.</p>
+<h3>Why sprayed, and why that needs a crew</h3>
+<p>You can identify a brushed cabinet door from across a room: brush tracks, paint pooling at the panel edges, a surface that never reads as furniture. Spraying lays the coating flat and even, which is the entire point of refinishing rather than replacing.</p>
+<p>Spraying well is a practiced skill. Gun setup, product viscosity, pass overlap and flash time between coats all matter, and a crew that sprays occasionally gets occasional results. Ours sprays daily.</p>
+<h3>Refinish or replace, honestly</h3>
+<div class="tw"><table>
+<thead><tr><th scope="col">Refinish when</th><th scope="col">Replace when</th></tr></thead>
+<tbody>
+<tr><td>Boxes are solid wood or quality plywood</td><td>Particleboard has swollen or delaminated</td></tr>
+<tr><td>Doors hang square and hinges hold</td><td>Doors are warped, split or sagging past adjustment</td></tr>
+<tr><td>The layout works, the color does not</td><td>The layout genuinely does not function</td></tr>
+<tr><td>Dated finish: honey oak, 1990s maple, orange stain</td><td>You need different sizes or a new configuration</td></tr>
+</tbody></table></div>
+<p>If two or more of the right column describe your kitchen, paint is the wrong tool and we will tell you so even though it means we do not get the job.</p>
+<h3>The oak grain decision</h3>
+<p>Colorado has a tremendous amount of golden and honey oak from the 1980s and 90s. Oak has deep open grain and paint does not fill it. Two honest options: leave the grain visible, which reads as painted wood and keeps character, or fill it for a smooth modern slab look, which adds labor. We will show you both on your own doors before you choose.</p>
+<h3>The countertop detail nobody mentions</h3>
+<p>Replacing cabinets almost always drags countertop replacement with it, because old counters rarely survive removal and almost never fit new boxes. That can add several thousand dollars a replacement quote does not always make obvious. Refinishing leaves your counters exactly where they are.</p></div><aside class="rail rise d1"><h3>Want this priced?</h3><p>Send photos and we will have a written number back within 24 hours. Four questions, then upload.</p><a class="b b-f" href="/virtual-estimate/">Start a virtual estimate</a><p style="margin-top:12px;font-size:.92rem">Or call <a href="tel:+17202085645" style="color:#fff"><strong>720-208-5645</strong></a></p></aside></div></div></section><section class="s chalk"><div class="w"><span class="kick">The other crews</span><h2>We run six, and they stay in their lane</h2><div class="crews"><a class="crew rise d0" href="/interior-painting/" style="--c:#1558c0"><span class="tag">Interior</span><h3>Interior crew</h3><p>Walls, ceilings, trim, stairwells and basements.</p><span class="go">See this crew &rarr;</span></a><a class="crew rise d1" href="/exterior-painting/" style="--c:#c33a09"><span class="tag">Exterior</span><h3>Exterior crew</h3><p>Altitude ultraviolet, chinook winds and freeze-thaw take coatings apart on a schedule.</p><span class="go">See this crew &rarr;</span></a><a class="crew rise d2" href="/commercial-painting/" style="--c:#2b3040"><span class="tag">Commercial</span><h3>Commercial crew</h3><p>Retail frontage, office corridors, warehouse square footage and community exteriors.</p><span class="go">See this crew &rarr;</span></a></div></div></section><section class="s "><div class="w"><div class="narrow"><span class="kick">Questions</span><h2>Cabinet questions</h2><div class="fq rise"><details><summary>How much does cabinet refinishing cost?</summary><div class="a"><p>Published Front Range data puts professional cabinet refinishing at roughly $2,000 to $8,000 for a typical kitchen. Door and drawer-front count, whether boxes are included, and whether you want the oak grain filled drive the number.</p></div></details><details><summary>Is refinishing cheaper than replacing?</summary><div class="a"><p>Substantially. Replacement commonly starts near $15,000 and runs past $30,000 for custom work, and it usually brings countertop replacement along with it. Refinishing leaves your counters in place.</p></div></details><details><summary>Can honey oak cabinets be painted white?</summary><div class="a"><p>Yes, and it is the most requested cabinet project we get. The question to settle first is whether you want the oak grain visible or filled smooth. We will show you both on your own doors.</p></div></details><details><summary>Do you spray or brush?</summary><div class="a"><p>Spray, always. Doors and drawer fronts are finished in a controlled area and boxes are sprayed in place behind containment. Brushed cabinets look brushed, which defeats the purpose.</p></div></details><details><summary>How long is my kitchen out of action?</summary><div class="a"><p>Three to five days on site. You keep countertops and appliances throughout. Doors are off for most of it, so plan on open shelving for the week.</p></div></details><details><summary>Can you fix a cabinet job someone else did badly?</summary><div class="a"><p>Usually. We assess whether the existing coating can be sanded and recoated or has to come back to bare, then rebuild the finish properly.</p></div></details></div></div></div></section><section class="ask" id="start" aria-labelledby="ah"><div class="w"><div class="ask-g"><div class="rise"><span class="kick">No cost, no pressure</span><h2 id="ah">Tell us about the project</h2><p class="lede">Send a few photos and the basics. Most projects get a written number back within 24 hours, and we will say plainly when yours needs a walkthrough instead.</p><div class="chips"><span>Free estimates</span><span>24-hour turnaround</span><span>5-year written warranty</span><span>Fully insured</span><span>Specialist crews</span></div><p class="fine">Prefer to talk it through? <a href="tel:+17202085645" style="color:#fff">720-208-5645</a></p></div><form class="card-f rise d1" data-lead data-subject="ESTIMATE: Cabinet crew (Painter Hotline)" novalidate><input type="hidden" name="source_page" value="painterhotline.com /cabinet-refinishing/"><div class="pot" aria-hidden="true"><label>Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div><div class="rows"><div class="f"><label for="cabin">Name *</label><input id="cabin" name="user_name" autocomplete="name"></div><div class="f"><label for="cabip">Phone *</label><input id="cabip" name="user_phone" type="tel" inputmode="tel" autocomplete="tel"></div><div class="f"><label for="cabie">Email</label><input id="cabie" name="user_email" type="email" autocomplete="email"></div><div class="f"><label for="cabiz">City or ZIP</label><input id="cabiz" name="user_area"></div><div class="f"><label for="cabis">Which crew</label><select id="cabis" name="project_type"><option>Interior</option><option>Exterior</option><option>Kitchen cabinets</option><option>Commercial</option><option>Deck or fence</option><option>Specialty coating</option><option>Fixing another painter's work</option><option>Not sure yet</option></select></div><div class="f"><label for="cabit">Timing</label><select id="cabit" name="timeline"><option>As soon as possible</option><option>Within a month</option><option>This season</option><option>Next spring</option><option>Just pricing it</option></select></div><div class="f full"><label for="cabiy">Year built</label><input id="cabiy" name="year_built" inputmode="numeric" placeholder="Pre-1978 changes the preparation"></div><div class="f full"><label for="cabif">Photos</label><input id="cabif" name="photos" type="file" accept="image/*" multiple></div><div class="f full"><label for="cabim">Anything we should know</label><textarea id="cabim" name="user_message" placeholder="Rooms or elevations, what is bothering you, colors you are considering, anything peeling or cracking."></textarea></div></div><button type="submit" class="b b-f" style="width:100%;margin-top:16px">Send it over</button><div class="note" role="status" aria-live="polite"></div></form></div></div></section></main><footer class="ft"><div class="w"><div class="fg"><div><div class="logo" style="margin-bottom:14px"><img src="/images/painter-hotline-mark.png" alt="Painter Hotline" width="44" height="44" loading="lazy" decoding="async"><span><b style="color:#fff">Painter Hotline</b><i style="color:#ffc244">Colorado painting co.</i></span></div><p style="max-width:42ch">A painting company with specialist crews: interior, exterior, cabinets, commercial, decks and specialty coatings. People first, then profits. We answer the phone and we stand behind the work.</p><p style="margin-top:14px"><a href="tel:+17202085645" style="font:800 1.3rem var(--fd);color:#fff">720-208-5645</a></p></div><div><h3>Our crews</h3><ul><li><a href="/interior-painting/">Interior crew</a></li><li><a href="/exterior-painting/">Exterior crew</a></li><li><a href="/cabinet-refinishing/">Cabinet crew</a></li><li><a href="/commercial-painting/">Commercial crew</a></li><li><a href="/deck-and-fence-staining/">Deck &amp; fence crew</a></li><li><a href="/specialty-coatings/">Specialty coatings crew</a></li></ul></div><div><h3>Start here</h3><ul><li><a href="/virtual-estimate/">Virtual estimate</a></li><li><a href="/walkthrough/">Two-minute walkthrough</a></li><li><a href="/what-it-costs/">What it costs</a></li><li><a href="/contact/">Contact</a></li></ul></div><div><h3>More</h3><ul><li><a href="/fix-a-bad-paint-job/">Fix a bad paint job</a></li><li><a href="/our-warranty/">The warranty</a></li><li><a href="/where-we-work/">Where we work</a></li><li><a href="/questions/">Questions</a></li><li><a href="/about/">Who we are</a></li><li><a href="/terms/">Terms</a></li></ul><h3 style="margin-top:20px">Also ours</h3><ul><li><a href="https://denverpaintcontractors.com/">Denver Paint Contractors</a></li><li><a href="https://bouldercopainters.com/">Boulder CO Painters</a></li><li><a href="https://paintingbrighton.com/">Painting Brighton</a></li></ul></div></div><div class="fe"><div>&copy; <span class="yr">2026</span> Painter Hotline. Search Converts LLC. Fully insured. Serving Colorado's Front Range.</div><div>5-year written workmanship warranty</div></div><div class="heart-row"><span class="heart" aria-hidden="true">&#10084;</span> Need a website? <a href="https://eyetoad.com/" rel="noopener">Eye To Ad Media</a></div></div></footer><div class="dock"><a href="tel:+17202085645">Call now</a><a class="hot" href="/virtual-estimate/">Virtual estimate</a></div><script>
+(function(){
+ var bg=document.getElementById('bg'),dr=document.getElementById('dr');
+ if(bg)bg.addEventListener('click',function(){dr.classList.toggle('on');bg.setAttribute('aria-expanded',dr.classList.contains('on'));});
+ document.querySelectorAll('.mg').forEach(function(m){
+  var b=m.querySelector('button');
+  b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('data-o');
+   document.querySelectorAll('.mg').forEach(function(x){x.removeAttribute('data-o');x.querySelector('button').setAttribute('aria-expanded','false');});
+   if(!o){m.setAttribute('data-o','');b.setAttribute('aria-expanded','true');}});
+ });
+ document.addEventListener('click',function(){document.querySelectorAll('.mg').forEach(function(x){x.removeAttribute('data-o');x.querySelector('button').setAttribute('aria-expanded','false');});});
+ var y=document.querySelector('.yr'); if(y)y.textContent=new Date().getFullYear();
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{rootMargin:'0px 0px -7% 0px',threshold:.06});
+  document.querySelectorAll('.rise,.wipe').forEach(function(el){io.observe(el)});
+ } else { document.querySelectorAll('.rise,.wipe').forEach(function(el){el.classList.add('on')}); }
+ document.querySelectorAll('.eml').forEach(function(a){try{var u=atob(a.dataset.u),d=atob(a.dataset.d);a.href='mailto:'+u+'@'+d;a.textContent=u+'@'+d;}catch(e){}});
+ var t0=Date.now(),hit=false;
+ ['keydown','pointerdown'].forEach(function(e){document.addEventListener(e,function(){hit=true;},{once:true});});
+ window.PHL={ready:function(){return Date.now()-t0>=4000&&hit;},
+  post:function(fd,s){var b=document.body;
+   try{var h=atob(b.dataset.h1)+atob(b.dataset.h2),x=atob(b.dataset.u1)+atob(b.dataset.u2)+'@'+atob(b.dataset.d1)+atob(b.dataset.d2);
+    fd.append('_subject',s);fd.append('_captcha','false');
+    return fetch('https://'+h+'/'+x,{method:'POST',body:fd}).then(function(r){return r.ok?'ok':'no'}).catch(function(){return 'no'});
+   }catch(e){return Promise.resolve('no')}}};
+ document.querySelectorAll('form[data-lead]').forEach(function(f){
+  f.addEventListener('submit',function(e){
+   e.preventDefault();
+   var o=f.querySelector('.note'); o.className='note';
+   if(f.querySelector('.pot input').value)return;
+   if(!PHL.ready()){o.className='note no';o.textContent='One moment, then press send again.';return;}
+   var n=f.querySelector('[name="user_name"]'),p=f.querySelector('[name="user_phone"]');
+   if(!n.value.trim()||p.value.replace(/\D/g,'').length<10){o.className='note no';o.textContent='We need your name and a 10-digit phone number.';(n.value.trim()?p:n).focus();return;}
+   var b=f.querySelector('button[type=submit]'),t=b.textContent;b.disabled=true;b.textContent='Sending...';
+   PHL.post(new FormData(f),f.getAttribute('data-subject')).then(function(s){
+    b.disabled=false;b.textContent=t;
+    if(s==='ok'){o.className='note ok';o.textContent='Got it. You will hear from us within one business day.';f.reset();}
+    else{o.className='note no';o.innerHTML='Could not send. Please call <a href="tel:+17202085645">720-208-5645</a>.';}
+   });
+  });
+ });
+})();
+</script><script src="/ringo.js" defer></script></body></html>

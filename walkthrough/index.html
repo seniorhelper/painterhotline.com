@@ -1,0 +1,496 @@
+<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Two-Minute Walkthrough | Painter Hotline</title><meta name="description" content="A short guided walkthrough of how Painter Hotline works: specialist crews, why most paint jobs fail, what repainting twice costs, and what we promise."><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><link rel="canonical" href="https://painterhotline.com/walkthrough/"><link rel="icon" type="image/png" href="/images/painter-hotline-favicon.png"><link rel="apple-touch-icon" href="/images/painter-hotline-favicon.png"><meta name="theme-color" content="#14161d"><meta property="og:type" content="website"><meta property="og:url" content="https://painterhotline.com/walkthrough/"><meta property="og:title" content="The Two-Minute Walkthrough | Painter Hotline"><meta property="og:description" content="A short guided walkthrough of how Painter Hotline works: specialist crews, why most paint jobs fail, what repainting twice costs, and what we promise."><meta property="og:image" content="https://painterhotline.com/images/ph-crew-interior-work.jpg"><meta property="og:site_name" content="Painter Hotline"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Two-Minute Walkthrough | Painter Hotline"><meta name="twitter:description" content="A short guided walkthrough of how Painter Hotline works: specialist crews, why most paint jobs fail, what repainting twice costs, and what we promise."><meta name="twitter:image" content="https://painterhotline.com/images/ph-crew-interior-work.jpg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><style>
+:root{
+ --ink:#14161d;--ink-2:#1e212b;--char:#2b3040;--slate:#4a5161;--grey:#6d7587;
+ --flame:#ff5a1f;--flame-d:#c33a09;--flame-l:#ffb48f;
+ --sky:#1f6feb;--mint:#17b890;--sun:#ffc244;
+ --paper:#fdfcfa;--chalk:#f4f1ec;--line:#e3dfd8;--white:#fff;
+ --fd:'Syne',system-ui,sans-serif;--fb:'Instrument Sans',system-ui,-apple-system,sans-serif;
+ --max:1300px;--rad:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--fb);font-size:1.05rem;line-height:1.7;color:var(--slate);background:var(--paper);overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--fd);color:var(--ink);line-height:1.05;font-weight:800;letter-spacing:-.025em}
+h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem)}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
+p{margin-bottom:1.05rem}
+a{color:var(--flame-d);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+strong{color:var(--ink);font-weight:600}
+.hero strong,.s.dark strong,.ask strong,.rail strong,.ft strong,.bar strong{color:#fff}
+.w{max-width:var(--max);margin:0 auto;padding:0 26px;min-width:0}
+.narrow{max-width:min(76ch,100%);margin:0 auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:10px;top:10px;z-index:999;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px}
+
+/* ---------- paint effects ---------- */
+/* brush-stroke highlight behind a word */
+.stroke{position:relative;display:inline-block;color:#fff;padding:0 .18em}
+.stroke::before{content:"";position:absolute;inset:-.06em -.1em;background:var(--flame-d);
+ border-radius:4px 10px 6px 12px/10px 5px 12px 6px;transform:rotate(-1.1deg) scaleX(0);transform-origin:left center;z-index:-1;
+ animation:sweep .8s cubic-bezier(.2,.8,.3,1) .25s forwards}
+@keyframes sweep{to{transform:rotate(-1.1deg) scaleX(1)}}
+/* drip divider */
+.drip{position:relative;height:28px;background:var(--ink)}
+.drip::after{content:"";position:absolute;top:100%;left:0;right:0;height:26px;
+ background:radial-gradient(circle at 10px -4px,var(--ink) 11px,transparent 12px),
+            radial-gradient(circle at 56px -9px,var(--ink) 15px,transparent 16px),
+            radial-gradient(circle at 112px -6px,var(--ink) 9px,transparent 10px),
+            radial-gradient(circle at 170px -12px,var(--ink) 13px,transparent 14px);
+ background-size:210px 26px;background-repeat:repeat-x}
+/* roller wipe reveal */
+.wipe{clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.65,0,.35,1)}
+.wipe.on{clip-path:inset(0 0 0 0)}
+/* rise in */
+.rise{opacity:0;transform:translateY(26px);transition:opacity .66s cubic-bezier(.2,.75,.3,1),transform .66s cubic-bezier(.2,.75,.3,1)}
+.rise.on{opacity:1;transform:none}
+.d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}.d4{transition-delay:.36s}
+/* splatter dots */
+.splat{position:absolute;border-radius:50%;opacity:.14;pointer-events:none}
+@media (prefers-reduced-motion:reduce){
+ .rise,.wipe{opacity:1;transform:none;clip-path:none;transition:none}
+ .stroke::before{animation:none;transform:rotate(-1.1deg) scaleX(1)}
+ *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+
+/* ---------- header ---------- */
+.bar{background:var(--ink);color:#cfd4df;font-size:.86rem}
+.bar .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.bar b{color:var(--sun)}
+.hd{position:sticky;top:0;z-index:90;background:rgba(253,252,250,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.hd-in{max-width:var(--max);margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.logo img{width:50px;height:50px;object-fit:contain}
+.logo b{display:block;font:800 1.2rem var(--fd);color:var(--ink);letter-spacing:-.03em;line-height:1}
+.logo i{display:block;font-style:normal;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--flame-d);font-weight:700;margin-top:3px}
+.nv{display:flex;gap:3px;margin-left:auto;align-items:center}
+.nv>a,.mg>button{font:600 .93rem var(--fb);color:var(--ink);background:none;border:0;cursor:pointer;text-decoration:none;padding:10px 13px;border-radius:9px}
+.nv>a:hover,.mg>button:hover{background:var(--chalk);color:var(--flame-d)}
+.nv>a[aria-current]{background:var(--chalk);color:var(--flame-d)}
+.mg{position:relative}
+.mg-p{position:absolute;top:46px;left:0;min-width:290px;background:#fff;border:1px solid var(--line);border-radius:var(--rad);box-shadow:0 22px 50px rgba(20,22,29,.16);padding:9px;display:none;z-index:95}
+.mg[data-o] .mg-p{display:block}
+.mg-p a{display:block;padding:11px 13px;border-radius:9px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+.mg-p a:hover{background:var(--chalk);color:var(--flame-d)}
+.mg-p .hint{display:block;font-size:.8rem;color:var(--grey);font-weight:400;margin-top:1px}
+.callbtn{display:inline-flex;align-items:center;gap:9px;background:var(--flame-d);color:#fff;padding:11px 20px;border-radius:999px;text-decoration:none;font:700 .98rem var(--fb);white-space:nowrap}
+.callbtn:hover{background:#9c2d06;color:#fff}
+.bg{display:none;background:none;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;margin-left:auto}
+.bg i{display:block;width:21px;height:2px;background:var(--ink);margin:4.5px 0}
+.dr{display:none;border-top:1px solid var(--line);background:#fff;padding:10px 26px 22px;max-height:76vh;overflow-y:auto}
+.dr.on{display:block}
+.dr a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}
+.dr a.s{padding-left:15px;font-weight:500;color:var(--slate);font-size:.95rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:#d8dce6;overflow:hidden}
+.hero-in{position:relative;z-index:3;max-width:var(--max);margin:0 auto;padding:84px 26px 92px;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
+.hero h1{color:#fff}
+.hero p.sub{font-size:1.16rem;color:#aeb6c6;max-width:52ch;margin:20px 0 30px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 .78rem var(--fb);letter-spacing:.18em;text-transform:uppercase;color:var(--sun);margin-bottom:20px}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--flame);border-radius:2px}
+.hero-art{position:relative;min-height:400px}
+.hero-art img{width:100%;height:420px;object-fit:cover;border-radius:var(--rad);position:relative;z-index:2}
+.hero-art::after{content:"";position:absolute;right:-18px;bottom:-18px;width:150px;height:150px;background:var(--flame);border-radius:var(--rad);z-index:1}
+.acts{display:flex;gap:13px;flex-wrap:wrap}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 1.02rem var(--fb);padding:15px 27px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s}
+.b:active{transform:translateY(1px)}
+.b-f{background:var(--flame-d);color:#fff;border-color:var(--flame-d)}
+.b-f:hover{background:#9c2d06;color:#fff}
+.b-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.b-w:hover{background:#fff;color:var(--ink)}
+.b-i{background:var(--ink);color:#fff;border-color:var(--ink)}
+.b-i:hover{background:var(--char);color:#fff}
+.b-o{background:#fff;color:var(--ink);border-color:var(--ink)}
+.b-o:hover{background:var(--chalk)}
+.hero-strip{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,.12)}
+.hero-strip .w{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.hero-strip div{padding:22px 18px;border-right:1px solid rgba(255,255,255,.12)}
+.hero-strip div:last-child{border-right:0}
+.hero-strip b{display:block;font:800 1.5rem var(--fd);color:#fff;line-height:1}
+.hero-strip span{display:block;font-size:.88rem;color:#9aa3b4;margin-top:5px}
+
+/* ---------- sections ---------- */
+.s{padding:76px 0;position:relative}
+.s.chalk{background:var(--chalk)}
+.s.dark{background:var(--ink);color:#c3c9d6}
+.s.dark h2,.s.dark h3{color:#fff}
+.s.dark a:not(.b):not(.pill):not(.crew),.ask a:not(.b),.hero a:not(.b),.rail a:not(.b){color:var(--sun)}
+.s.dark a:not(.b):hover,.ask a:not(.b):hover,.hero a:not(.b):hover,.rail a:not(.b):hover{color:#fff}
+.b-f,.b-f:hover,.b-i,.b-i:hover{color:#fff}
+.s.dark .kick,.ask .kick,.hero .kick{color:var(--sun)}
+.kick{display:block;font:700 .77rem var(--fb);letter-spacing:.19em;text-transform:uppercase;color:var(--flame-d);margin-bottom:12px}
+.lede{font-size:1.14rem;max-width:62ch;margin-top:14px}
+
+/* answer box */
+.ab{background:#fff;border:1px solid var(--line);border-left:6px solid var(--flame);border-radius:0 var(--rad) var(--rad) 0;padding:24px 28px;box-shadow:0 10px 30px rgba(20,22,29,.05)}
+.ab p{margin:0;font-size:1.06rem;color:var(--ink)}
+.s.chalk .ab{background:var(--paper)}
+
+/* crew cards */
+.crews{display:grid;grid-template-columns:repeat(auto-fit,minmax(282px,1fr));gap:20px}
+.crew{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:28px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .22s,box-shadow .22s}
+.crew::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c,var(--flame));transition:width .28s}
+.crew:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(20,22,29,.13)}
+.crew:hover::before{width:100%;opacity:.07}
+.crew .tag{display:inline-block;font:700 .72rem var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--c,var(--flame-d));margin-bottom:9px}
+.crew h3{margin-bottom:8px}
+.crew p{font-size:.97rem;margin:0;color:var(--slate)}
+.crew .go{display:inline-block;margin-top:14px;font:700 .9rem var(--fb);color:var(--ink)}
+.crew:hover .go{color:var(--c,var(--flame-d))}
+
+/* split */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:50px;align-items:start}
+.copy h2{margin:34px 0 13px}
+.copy h2:first-child{margin-top:0}
+.copy h3{margin:26px 0 9px}
+.copy ul,.copy ol{margin:0 0 17px 22px}
+.copy li{margin-bottom:8px}
+.copy>ul>li::marker{color:var(--flame)}
+.rail{position:sticky;top:106px;background:var(--ink);color:#c3c9d6;border-radius:var(--rad);padding:26px}
+.rail h3{color:#fff;margin-bottom:10px}
+.rail p{font-size:.95rem}
+.rail .b{width:100%;margin-top:10px}
+
+/* table */
+.tw{overflow-x:auto;max-width:100%;min-width:0;margin:22px 0;border:1px solid var(--line);border-radius:var(--rad);background:#fff}
+.tw table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:540px}
+.tw caption{text-align:left;padding:13px 16px;font-size:.87rem;color:var(--grey);background:var(--chalk);border-bottom:1px solid var(--line)}
+.tw th{background:var(--ink);color:#fff;text-align:left;font:700 .78rem var(--fb);letter-spacing:.1em;text-transform:uppercase;padding:13px 16px}
+.tw td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--slate)}
+.s.dark .tw,.s.dark .tw td,.s.dark .tw caption{color:var(--slate)}
+.s.dark .tw td strong{color:var(--ink)}
+.tw tr:last-child td{border-bottom:0}
+.tw tbody tr:nth-child(even){background:#fbfaf7}
+
+/* faq */
+.fq details{background:#fff;border:1px solid var(--line);border-radius:var(--rad);margin-bottom:11px;overflow:hidden}
+.fq details[open]{border-color:var(--flame-l);box-shadow:0 10px 28px rgba(20,22,29,.07)}
+.fq summary{cursor:pointer;list-style:none;padding:19px 56px 19px 22px;font:700 1.06rem var(--fd);color:var(--ink);position:relative;letter-spacing:-.01em}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"";position:absolute;right:22px;top:50%;width:12px;height:12px;margin-top:-7px;border-right:2.5px solid var(--flame-d);border-bottom:2.5px solid var(--flame-d);transform:rotate(45deg);transition:transform .24s}
+.fq details[open] summary::after{transform:rotate(-135deg)}
+.fq .a{padding:0 22px 20px}
+.fq .a p:last-child{margin-bottom:0}
+
+/* forms */
+.ask{background:var(--ink);color:#c3c9d6;padding:72px 0}
+.ask h2{color:#fff}
+.ask-g{display:grid;grid-template-columns:.86fr 1.14fr;gap:46px;align-items:start}
+.card-f{background:#fff;border-radius:var(--rad);padding:28px;min-width:0}
+.rows{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1;min-width:0}
+.f label{font:600 .85rem var(--fb);color:var(--ink)}
+.f input,.f select,.f textarea{border:1.5px solid var(--line);border-radius:10px;padding:12px;font:1rem var(--fb);color:var(--ink);background:#fff;min-width:0;max-width:100%}
+.f input[type=file]{font-size:.9rem;padding:10px;width:100%;min-width:0}
+.f textarea{min-height:108px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--flame);box-shadow:0 0 0 3px rgba(255,90,31,.16)}
+.pot{position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none}
+.fine{font-size:.87rem;color:#95a0b3;margin-top:11px}
+.note{display:none;margin-top:13px;padding:13px 15px;border-radius:10px;font-weight:600}
+.note.ok{display:block;background:#e7f7ef;color:#126b45}
+.note.no{display:block;background:#fdeceb;color:#a32b1f}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 15px;border-radius:999px;font-size:.88rem;color:#dbe0ea}
+
+/* footer */
+.ft{background:var(--ink-2);color:#9aa3b4;padding:58px 0 0;font-size:.95rem}
+.ft a{color:#dde2ea;text-decoration:none}
+.ft a:hover{color:var(--sun)}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid #333848}
+.ft h3{color:#fff;font:700 .78rem var(--fb);letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+.ft ul{list-style:none}
+.ft li{margin-bottom:9px}
+.fe{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:20px 0;font-size:.87rem;color:#79out}
+.fe{color:#8f98a9}
+.heart-row{text-align:center;padding:16px 0 28px;font-size:.93rem;color:#9aa3b4}
+.heart{display:inline-block;color:#ff4d4d;font-size:1.2rem;animation:beat 2.4s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}48%{transform:scale(1.22)}}
+.map{border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;height:330px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.pill{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 17px;font:600 .92rem var(--fb);text-decoration:none;color:var(--ink);transition:.18s}
+.pill:hover{border-color:var(--flame);background:var(--flame);color:#fff}
+.bc{font-size:.85rem;color:var(--grey);padding:16px 0 0}
+.bc a{color:var(--grey)}
+.dock{position:fixed;left:0;right:0;bottom:0;display:none;z-index:88;background:var(--ink);border-top:3px solid var(--flame)}
+.dock a{flex:1;text-align:center;padding:15px 8px;color:#fff;text-decoration:none;font:700 .95rem var(--fb)}
+.dock a.hot{background:var(--flame-d)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:24px}
+.gal img{width:100%;height:220px;object-fit:cover;border-radius:var(--rad)}
+@media (max-width:1080px){
+ .nv{display:none}.bg{display:block}.callbtn{display:none}
+ .hero-in{grid-template-columns:minmax(0,1fr);gap:34px;padding:58px 26px 64px}
+ .hero-art img{height:300px}
+ .hero-strip .w{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .hero-strip div{border-bottom:1px solid rgba(255,255,255,.12)}
+ .split{grid-template-columns:minmax(0,1fr);gap:34px}.rail{position:static}
+ .ask-g{grid-template-columns:minmax(0,1fr);gap:28px}
+ .fg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+ .hero-strip .w{grid-template-columns:minmax(0,1fr)}
+ .rows{grid-template-columns:minmax(0,1fr)}
+ .dock{display:flex}body{padding-bottom:58px}
+ .fg{grid-template-columns:minmax(0,1fr)}
+ .logo b{font-size:1.04rem}.logo img{width:42px;height:42px}
+ .s{padding:52px 0}
+ .hero-art::after{display:none}
+}
+
+.wt{max-width:860px;margin:0 auto}
+.wt-bar{height:5px;background:var(--line);border-radius:999px;overflow:hidden;margin-bottom:10px}
+.wt-fill{height:100%;background:linear-gradient(90deg,var(--flame),var(--sun));width:0;transition:width .5s cubic-bezier(.3,.8,.3,1)}
+.wt-count{font:600 .82rem var(--fb);color:var(--grey);letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px;display:block}
+.wt-step{display:none;animation:wtin .45s cubic-bezier(.2,.8,.3,1)}
+.wt-step.live{display:block}
+@keyframes wtin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.wt-step h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:14px}
+.wt-step .say{font-size:1.14rem;color:var(--slate);max-width:62ch}
+.wt-step .say strong{color:var(--ink)}
+.wt-opts{display:grid;gap:12px;margin-top:28px}
+.wt-opt{display:flex;align-items:flex-start;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);
+ border-radius:var(--rad);padding:18px 20px;cursor:pointer;font:500 1.02rem var(--fb);color:var(--ink);transition:border-color .18s,transform .14s,box-shadow .18s}
+.wt-opt:hover{border-color:var(--flame);transform:translateY(-2px);box-shadow:0 12px 28px rgba(20,22,29,.1)}
+.wt-opt .ic{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--chalk);display:grid;place-items:center;
+ font:800 .9rem var(--fd);color:var(--flame-d)}
+.wt-opt b{display:block;font-weight:700}
+.wt-opt span{display:block;font-size:.93rem;color:var(--grey);margin-top:2px}
+.wt-reply{margin-top:24px;padding:22px 24px;background:var(--chalk);border-left:5px solid var(--flame);border-radius:0 var(--rad) var(--rad) 0;display:none}
+.wt-reply.live{display:block;animation:wtin .4s ease}
+.wt-reply p:last-child{margin-bottom:0}
+.wt-nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.wt-back{background:none;border:0;color:var(--grey);font:600 .95rem var(--fb);cursor:pointer;padding:10px 4px;text-decoration:underline}
+.wt-back:hover{color:var(--ink)}
+.wt-math{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:2px;margin:24px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
+.wt-math div{background:#fff;padding:18px 20px}
+.wt-math dt{font:600 .78rem var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
+.wt-math dd{font:800 1.5rem var(--fd);color:var(--ink);line-height:1}
+.wt-math div.bad dd{color:var(--flame-d)}
+.wt-crewlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:22px}
+.wt-crewlist span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:600 .92rem var(--fb);color:var(--ink);text-align:center}
+.wt-end{text-align:center;padding:10px 0}
+.wt-yes{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.wt-form{display:none;margin-top:30px;text-align:left}
+.wt-form.live{display:block;animation:wtin .45s ease}
+.wt-warm{display:none;margin-top:26px;background:var(--chalk);border-radius:var(--rad);padding:26px}
+.wt-warm.live{display:block;animation:wtin .45s ease}
+@media (max-width:620px){.wt-math{grid-template-columns:minmax(0,1fr)}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["HousePainter", "LocalBusiness"], "@id": "https://painterhotline.com/#biz", "name": "Painter Hotline", "url": "https://painterhotline.com/", "telephone": "+17202085645", "email": "quote@painterhotline.com", "logo": "https://painterhotline.com/images/painter-hotline-mark.png", "image": "https://painterhotline.com/images/ph-crew-exterior-work.jpg", "description": "Painter Hotline is a Colorado painting company organized into specialist crews: interior, exterior, kitchen cabinet refinishing, commercial, deck and fence staining, and specialty coatings. Fully insured with a written 5-year workmanship warranty and free virtual estimates returned within 24 hours.", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 39.7392, "longitude": -104.9903}, "areaServed": [{"@type": "State", "name": "Colorado"}, {"@type": "City", "name": "Denver, CO"}, {"@type": "City", "name": "Aurora, CO"}, {"@type": "City", "name": "Littleton, CO"}, {"@type": "City", "name": "Centennial, CO"}, {"@type": "City", "name": "Highlands Ranch, CO"}, {"@type": "City", "name": "Parker, CO"}, {"@type": "City", "name": "Castle Rock, CO"}, {"@type": "City", "name": "Thornton, CO"}, {"@type": "City", "name": "Westminster, CO"}, {"@type": "City", "name": "Longmont, CO"}, {"@type": "City", "name": "Breckenridge, CO"}, {"@type": "City", "name": "Fort Morgan, CO"}], "priceRange": "$$", "paymentAccepted": "Cash, Check, Credit Card", "currenciesAccepted": "USD", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "07:00", "closes": "19:00"}], "knowsAbout": ["Specialist painting crews", "Repairing failed paint jobs", "Cabinet spray finishing", "Elastomeric and specialty coatings", "Lead-safe work practices", "High-altitude coating failure", "Commercial phased painting", "HOA color approval", "Virtual painting estimates"], "makesOffer": {"@type": "Offer", "name": "25% off painting labor", "description": "25% off labor on painting projects booked by October 31, 2026. Paint and materials not included.", "availabilityStarts": "2026-10-01", "availabilityEnds": "2026-10-31", "url": "https://painterhotline.com/contact/"}, "potentialAction": {"@type": "RequestQuoteAction", "name": "Request a free virtual estimate", "target": {"@type": "EntryPoint", "urlTemplate": "https://painterhotline.com/virtual-estimate/", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}, "sameAs": ["https://denverpaintcontractors.com", "https://bouldercopainters.com", "https://paintingbrighton.com"]}, {"@type": "WebSite", "@id": "https://painterhotline.com/#site", "url": "https://painterhotline.com/", "name": "Painter Hotline", "publisher": {"@id": "https://painterhotline.com/#biz"}, "inLanguage": "en-US"}, {"@type": "WebPage", "@id": "https://painterhotline.com/walkthrough/#pg", "url": "https://painterhotline.com/walkthrough/", "name": "The Two-Minute Walkthrough | Painter Hotline", "description": "A short guided walkthrough of how Painter Hotline works: specialist crews, why most paint jobs fail, what repainting twice costs, and what we promise.", "isPartOf": {"@id": "https://painterhotline.com/#site"}, "about": {"@id": "https://painterhotline.com/#biz"}, "primaryImageOfPage": "https://painterhotline.com/images/ph-crew-interior-work.jpg", "inLanguage": "en-US", "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".ab", ".wt-step h2", ".fq summary"]}}, {"@type": "BreadcrumbList", "@id": "https://painterhotline.com/walkthrough/#bc", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://painterhotline.com/"}, {"@type": "ListItem", "position": 2, "name": "Walkthrough", "item": "https://painterhotline.com/walkthrough/"}]}, {"@type": "FAQPage", "@id": "https://painterhotline.com/walkthrough/#faq", "mainEntity": [{"@type": "Question", "name": "How long does the walkthrough take?", "acceptedAnswer": {"@type": "Answer", "text": "About two minutes. Seven short steps covering how we are organized, why most paint jobs fail, what repainting twice actually costs, and what we will and will not promise. It ends with a single yes or no question about whether we can look at your project."}}, {"@type": "Question", "name": "Do I have to give my details to go through it?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nothing is required until the final step, and only if you answer yes. You can read the whole thing and leave."}}, {"@type": "Question", "name": "What happens if I say yes?", "acceptedAnswer": {"@type": "Answer", "text": "A short form appears for your contact details, the type of work and photos. A written estimate comes back within one business day, naming every surface, preparation step, product, sheen, coat count and the warranty."}}, {"@type": "Question", "name": "What happens if I say no?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing. No follow-up calls. You get our number to save and the four questions worth asking any painter, including whoever you do end up hiring."}}, {"@type": "Question", "name": "Is this just a sales pitch?", "acceptedAnswer": {"@type": "Answer", "text": "It is a sales page, and we would rather say so than pretend. It is also accurate: the failure modes, the arithmetic and the crew structure are all real, and you can verify them against any other bid you get."}}]}]}</script></head><body data-h1="Zm9ybQ==" data-h2="c3VibWl0LmNv" data-u1="aW4=" data-u2="Zm8=" data-d1="ZXlldG9hZA==" data-d2="LmNvbQ=="><a class="skip" href="#main">Skip to content</a><div class="bar"><div class="w"><span>Colorado painting company &middot; specialist crews for every kind of work</span><span><b>25% off labor on projects booked by October 31, 2026</b> &middot; Paint and materials not included.</span></div></div><header class="hd"><div class="hd-in"><a class="logo" href="/" aria-label="Painter Hotline, home"><img src="/images/painter-hotline-mark.png" alt="Painter Hotline, a Colorado painting company" width="50" height="50" fetchpriority="high" decoding="async"><span><b>Painter Hotline</b><i>Colorado painting co.</i></span></a><nav class="nv" aria-label="Main"><div class="mg"><button type="button" aria-expanded="false">Our crews</button><div class="mg-p"><a href="/interior-painting/">Interior crew</a><a href="/exterior-painting/">Exterior crew</a><a href="/cabinet-refinishing/">Cabinet crew</a><a href="/commercial-painting/">Commercial crew</a><a href="/deck-and-fence-staining/">Deck &amp; fence crew</a><a href="/specialty-coatings/">Specialty coatings crew</a></div></div><div class="mg"><button type="button" aria-expanded="false" aria-current="true">Start here</button><div class="mg-p"><a href="/virtual-estimate/">Virtual estimate<span class="hint">Photos in, written number back in 24 hours</span></a><a href="/walkthrough/" aria-current="page">Two-minute walkthrough<span class="hint">See if we are the right company for your project</span></a><a href="/what-it-costs/">What it costs<span class="hint">Published 2026 ranges and what moves them</span></a></div></div><div class="mg"><button type="button" aria-expanded="false">More</button><div class="mg-p"><a href="/fix-a-bad-paint-job/">Fix a bad paint job</a><a href="/our-warranty/">The warranty</a><a href="/where-we-work/">Where we work</a><a href="/questions/">Questions</a><a href="/about/">Who we are</a></div></div><a href="/contact/">Contact</a></nav><a class="callbtn" href="tel:+17202085645">720-208-5645</a><button class="bg" id="bg" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button></div><div class="dr" id="dr"><a href="/">Home</a><a class="s" href="/interior-painting/">Interior crew</a><a class="s" href="/exterior-painting/">Exterior crew</a><a class="s" href="/cabinet-refinishing/">Cabinet crew</a><a class="s" href="/commercial-painting/">Commercial crew</a><a class="s" href="/deck-and-fence-staining/">Deck &amp; fence crew</a><a class="s" href="/specialty-coatings/">Specialty coatings crew</a><a class="s" href="/virtual-estimate/">Virtual estimate</a><a class="s" href="/walkthrough/">Two-minute walkthrough</a><a class="s" href="/what-it-costs/">What it costs</a><a class="s" href="/fix-a-bad-paint-job/">Fix a bad paint job</a><a class="s" href="/our-warranty/">The warranty</a><a class="s" href="/where-we-work/">Where we work</a><a class="s" href="/questions/">Questions</a><a class="s" href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="tel:+17202085645">Call 720-208-5645</a></div></header><main id="main"><div class="w"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Walkthrough</nav></div><section class="s" id="wtTop"><div class="w"><div class="wt"><span class="kick">A two-minute walkthrough</span><h1 style="font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:18px">Is Painter Hotline the right company for your project?</h1><div class="wt-bar"><div class="wt-fill" id="wtFill"></div></div><span class="wt-count" id="wtCount">Step 1 of 7</span><div class="wt-step live">
+<h2>Before we talk about paint, one question.</h2>
+<p class="say">Have you ever hired a contractor and regretted it? Not necessarily a painter. Anyone.</p>
+<div class="wt-opts">
+ <button class="wt-opt" data-next data-tag="bad experience: yes"
+  data-reply="<p><strong>Then you already know the part most companies skip.</strong> The work itself is rarely what goes wrong. It is the not showing up, the vanishing phone number, the thing that was supposed to be included and quietly was not.</p><p>We would rather you judge us on those than on a photo gallery. Everybody has nice photos.</p>">
+  <span class="ic">A</span><span><b>Yes, at least once</b><span>Something about it still bothers me</span></span></button>
+ <button class="wt-opt" data-next data-tag="bad experience: mostly fine"
+  data-reply="<p><strong>Good. That is rarer than it should be.</strong> Then you already have a baseline for what normal looks like, which makes this easy: we are asking to be measured against the best experience you have had, not the worst.</p><p>What usually separates them is not skill. It is whether the company answers the phone after the invoice clears.</p>">
+  <span class="ic">B</span><span><b>Mostly fine, no horror stories</b><span>Nothing I would warn a friend about</span></span></button>
+ <button class="wt-opt" data-next data-tag="bad experience: first time"
+  data-reply="<p><strong>Then let us not make this your story.</strong> First-time hiring is where the most money gets lost, because it is hard to know which questions matter.</p><p>By the end of this you will have four of them, and you can use them on us and on everyone else you call.</p>">
+  <span class="ic">C</span><span><b>This is my first real project</b><span>I have not hired for something like this before</span></span></button>
+</div>
+<div class="wt-reply"></div>
+<div class="wt-nav"><button class="b b-i" data-next data-continue style="display:none">Keep going &rarr;</button></div>
+</div><div class="wt-step">
+<h2>We get called out to fix other painters' work more than you would think.</h2>
+<p class="say">Not occasionally. Regularly. Enough that we have a page about it.</p>
+<p class="say">And almost none of those jobs failed because somebody picked a bad color or rolled it badly. They failed for one of four reasons, every time:</p>
+<div class="tw"><table>
+<thead><tr><th scope="col">What was skipped</th><th scope="col">How it shows up</th><th scope="col">When</th></tr></thead>
+<tbody>
+<tr><td>The wash</td><td>Paint sitting on chalk and dust lets go in sheets</td><td>12 to 24 months</td></tr>
+<tr><td>Scraping to a sound edge</td><td>The old failing layer takes the new one with it</td><td>First hard winter</td></tr>
+<tr><td>Primer on bare or repaired substrate</td><td>Blistering and peeling, usually low on the wall</td><td>Within two seasons</td></tr>
+<tr><td>Caulking the joints</td><td>Water gets behind the film and freeze-thaw lifts it</td><td>One to three winters</td></tr>
+</tbody></table></div>
+<p class="say">None of those are visible on the day the crew drives away. That is exactly the problem: <strong>a bad paint job and a good one look identical for about eighteen months.</strong></p>
+<div class="wt-nav"><button class="b b-i" data-next>So what does that cost? &rarr;</button><button class="wt-back" data-back>Back</button></div>
+</div><div class="wt-step">
+<h2>What is the cost of doing it twice?</h2>
+<p class="say">Here is the arithmetic, using two real bids on the same house.</p>
+<div class="wt-math">
+ <div><dt>The cheap bid</dt><dd>$6,000</dd></div>
+ <div><dt>The thorough bid</dt><dd>$9,500</dd></div>
+ <div><dt>Looks like you saved</dt><dd>$3,500</dd></div>
+</div>
+<p class="say">Eighteen months later the cheap job starts lifting, because nothing was holding it to the house. Now the next painter cannot simply coat over it. <strong>The failed layer has to come off first</strong>, which is harder and more expensive than painting bare siding would have been.</p>
+<div class="wt-math">
+ <div><dt>Already spent</dt><dd>$6,000</dd></div>
+ <div class="bad"><dt>Removal of the failure</dt><dd>+ $2,000</dd></div>
+ <div class="bad"><dt>Then the real job</dt><dd>+ $9,500</dd></div>
+</div>
+<p class="say"><strong>That $3,500 of savings cost about $8,000.</strong> This is the single most common way homeowners lose money on painting, and it is never obvious at the moment of decision.</p>
+<p class="say">We are not the cheapest bid you will get. We would rather tell you that now than have you find out in year two.</p>
+<div class="wt-nav"><button class="b b-i" data-next>Fair. What makes you different? &rarr;</button><button class="wt-back" data-back>Back</button></div>
+</div><div class="wt-step">
+<h2>We do not send the same three guys at everything.</h2>
+<p class="say">Most painting companies have one crew that does whatever comes in. Cabinets on Monday, a warehouse on Wednesday, your living room on Friday. Those are genuinely different trades.</p>
+<p class="say">We run separate crews, and they stay in their lane:</p>
+<div class="wt-crewlist">
+ <span>Interior</span><span>Exterior</span><span>Cabinets</span>
+ <span>Commercial</span><span>Decks &amp; fences</span><span>Specialty coatings</span>
+</div>
+<p class="say" style="margin-top:22px">The cabinet crew sprays every day, so your doors come back looking like furniture rather than brushwork. The commercial crew works nights and phases a building so nobody loses a day of trade. The exterior crew knows what Colorado altitude and chinook winds do to a coating, and sequences the elevations around it.</p>
+<p class="say">That is the actual answer to <strong>"why would yours be different."</strong> Not a slogan. A different staffing model.</p>
+<div class="wt-nav"><button class="b b-i" data-next>Keep going &rarr;</button><button class="wt-back" data-back>Back</button></div>
+</div><div class="wt-step">
+<h2>We are not perfect, and we will not pretend otherwise.</h2>
+<p class="say">On a long enough timeline, every painting company has a day that goes sideways. A board that was worse underneath than it looked. A color that reads differently on the wall than on the chip. Weather that moves a schedule.</p>
+<p class="say">What we will promise is narrower and more useful:</p>
+<ul class="say" style="margin:18px 0 0 22px">
+ <li><strong>We show up.</strong> If a day moves, you hear it from us rather than noticing an empty driveway.</li>
+ <li><strong>We answer the phone.</strong> During the project and after the invoice. Same number either way.</li>
+ <li><strong>We stand behind the work.</strong> Five years on workmanship, in writing, with the exclusions actually printed instead of buried.</li>
+ <li><strong>We tell you the hard thing early.</strong> If your siding needs carpentry first, you hear it at the estimate, not after you have paid for coatings that were going to fail.</li>
+</ul>
+<p class="say" style="margin-top:20px">Attention to detail and the kind of customer service we would want in our own homes. That is in the mission, and it is the part we actually get judged on.</p>
+<div class="wt-nav"><button class="b b-i" data-next>Keep going &rarr;</button><button class="wt-back" data-back>Back</button></div>
+</div><div class="wt-step">
+<h2>People first, then profits.</h2>
+<p class="say">That order matters and it is not decoration. A painting company that optimizes for margin first starts skipping the wash, thinning the coats and quoting "prep as needed." It works for about two years.</p>
+<p class="say">We would rather be the company you call the next time something needs coating, and the one you give your neighbor's number to. That only happens if the first project was handled properly and somebody picked up when you called afterward.</p>
+<p class="say"><strong>Family-friendly, straightforward, and still answering in year four.</strong> That is the whole business model.</p>
+<div class="wt-nav"><button class="b b-f" data-next>Alright, last question &rarr;</button><button class="wt-back" data-back>Back</button></div>
+</div><div class="wt-step">
+<div class="wt-end">
+<h2>So: can we take a look at your project?</h2>
+<p class="say" style="margin:0 auto">Not a commitment to hire us. A free written estimate that names every surface, every preparation step, the exact product and sheen, the coat count and the warranty &mdash; so you have something real to compare against whoever else you call.</p>
+<p class="say" style="margin:14px auto 0"><strong>Most estimates come back within 24 hours.</strong> You can send photos instead of scheduling a visit.</p>
+<div class="wt-yes" id="wtChoice">
+ <button class="b b-f" id="wtYes" style="min-width:210px">Yes, take a look</button>
+ <button class="b b-o" id="wtNo" style="min-width:210px">Not right now</button>
+</div>
+</div>
+
+<div class="wt-warm" id="wtWarm">
+ <h3 style="margin-bottom:10px">Completely fair.</h3>
+ <p>Timing is usually the real reason, and pushing on that would make us exactly the kind of company this page has been arguing against.</p>
+ <p>Two things that cost you nothing either way:</p>
+ <ul style="margin:0 0 14px 22px">
+  <li>Save <a href="tel:+17202085645"><strong>720-208-5645</strong></a>. When something needs coating in six months, you will not have to start from a search again.</li>
+  <li>Use the four questions from this page on whoever you do hire: what preparation is included, which exact product and sheen, how many coats, and what the warranty covers. They work on anybody.</li>
+ </ul>
+ <p style="margin-bottom:0">And if the estimate would help later rather than now, <a href="/virtual-estimate/">the virtual estimate</a> is here whenever you want it. No follow-up calls from us in the meantime.</p>
+</div>
+
+<div class="wt-form" id="wtForm">
+ <h3 style="margin-bottom:6px">Good. Here is everything we need.</h3>
+ <p style="color:var(--grey);margin-bottom:18px">Photos help more than descriptions. Written estimate back within one business day.</p>
+ <form class="card-f" data-lead data-subject="WALKTHROUGH: ready to move forward (Painter Hotline)" novalidate style="border:1px solid var(--line)">
+  <input type="hidden" name="source_page" value="painterhotline.com /walkthrough/">
+  <input type="hidden" name="walkthrough_answers" id="wtAnswers" value="">
+  <div class="pot" aria-hidden="true"><label>Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+  <div class="rows">
+   <div class="f"><label for="wn">Name *</label><input id="wn" name="user_name" autocomplete="name"></div>
+   <div class="f"><label for="wp">Phone *</label><input id="wp" name="user_phone" type="tel" inputmode="tel" autocomplete="tel"></div>
+   <div class="f"><label for="we">Email</label><input id="we" name="user_email" type="email" autocomplete="email"></div>
+   <div class="f"><label for="wz">City or ZIP</label><input id="wz" name="user_area"></div>
+   <div class="f"><label for="ws">Which crew</label><select id="ws" name="project_type">
+    <option>Interior</option><option>Exterior</option><option>Kitchen cabinets</option>
+    <option>Commercial</option><option>Deck or fence</option><option>Specialty coating</option>
+    <option>Fixing another painter's work</option><option>Not sure yet</option></select></div>
+   <div class="f"><label for="wt2">Timing</label><select id="wt2" name="timeline">
+    <option>As soon as possible</option><option>Within a month</option><option>This season</option>
+    <option>Next spring</option><option>Just pricing it</option></select></div>
+   <div class="f full"><label for="wy">Year built</label><input id="wy" name="year_built" inputmode="numeric" placeholder="Pre-1978 changes the preparation"></div>
+   <div class="f full"><label for="wf">Photos</label><input id="wf" name="photos" type="file" accept="image/*" multiple></div>
+   <div class="f full"><label for="wm">Anything we should know</label><textarea id="wm" name="user_message" placeholder="What is bothering you, what you want it to look like, anything peeling or cracking."></textarea></div>
+  </div>
+  <button type="submit" class="b b-f" style="width:100%;margin-top:16px">Send it over</button>
+  <div class="note" role="status" aria-live="polite"></div>
+ </form>
+</div>
+<div class="wt-nav" style="justify-content:center"><button class="wt-back" data-back>Back</button></div>
+</div></div></div></section><section class="s chalk"><div class="w"><div class="narrow"><span class="kick">In short</span><div class="ab rise"><p><strong>Painter Hotline</strong> is a Colorado painting company that runs separate specialist crews for interior, exterior, kitchen cabinet refinishing, commercial, deck and fence staining, and specialty coatings. This walkthrough explains how we work, why skipped preparation causes most paint failures, and what the real cost of repainting twice looks like. Free written estimates are returned within 24 hours. Call <a href="tel:+17202085645">720-208-5645</a>.</p></div></div></div></section><section class="s "><div class="w"><div class="narrow"><span class="kick">Questions</span><h2>About the walkthrough</h2><div class="fq rise"><details><summary>How long does the walkthrough take?</summary><div class="a"><p>About two minutes. Seven short steps covering how we are organized, why most paint jobs fail, what repainting twice actually costs, and what we will and will not promise. It ends with a single yes or no question about whether we can look at your project.</p></div></details><details><summary>Do I have to give my details to go through it?</summary><div class="a"><p>No. Nothing is required until the final step, and only if you answer yes. You can read the whole thing and leave.</p></div></details><details><summary>What happens if I say yes?</summary><div class="a"><p>A short form appears for your contact details, the type of work and photos. A written estimate comes back within one business day, naming every surface, preparation step, product, sheen, coat count and the warranty.</p></div></details><details><summary>What happens if I say no?</summary><div class="a"><p>Nothing. No follow-up calls. You get our number to save and the four questions worth asking any painter, including whoever you do end up hiring.</p></div></details><details><summary>Is this just a sales pitch?</summary><div class="a"><p>It is a sales page, and we would rather say so than pretend. It is also accurate: the failure modes, the arithmetic and the crew structure are all real, and you can verify them against any other bid you get.</p></div></details></div></div></div></section></main><footer class="ft"><div class="w"><div class="fg"><div><div class="logo" style="margin-bottom:14px"><img src="/images/painter-hotline-mark.png" alt="Painter Hotline" width="44" height="44" loading="lazy" decoding="async"><span><b style="color:#fff">Painter Hotline</b><i style="color:#ffc244">Colorado painting co.</i></span></div><p style="max-width:42ch">A painting company with specialist crews: interior, exterior, cabinets, commercial, decks and specialty coatings. People first, then profits. We answer the phone and we stand behind the work.</p><p style="margin-top:14px"><a href="tel:+17202085645" style="font:800 1.3rem var(--fd);color:#fff">720-208-5645</a></p></div><div><h3>Our crews</h3><ul><li><a href="/interior-painting/">Interior crew</a></li><li><a href="/exterior-painting/">Exterior crew</a></li><li><a href="/cabinet-refinishing/">Cabinet crew</a></li><li><a href="/commercial-painting/">Commercial crew</a></li><li><a href="/deck-and-fence-staining/">Deck &amp; fence crew</a></li><li><a href="/specialty-coatings/">Specialty coatings crew</a></li></ul></div><div><h3>Start here</h3><ul><li><a href="/virtual-estimate/">Virtual estimate</a></li><li><a href="/walkthrough/">Two-minute walkthrough</a></li><li><a href="/what-it-costs/">What it costs</a></li><li><a href="/contact/">Contact</a></li></ul></div><div><h3>More</h3><ul><li><a href="/fix-a-bad-paint-job/">Fix a bad paint job</a></li><li><a href="/our-warranty/">The warranty</a></li><li><a href="/where-we-work/">Where we work</a></li><li><a href="/questions/">Questions</a></li><li><a href="/about/">Who we are</a></li><li><a href="/terms/">Terms</a></li></ul><h3 style="margin-top:20px">Also ours</h3><ul><li><a href="https://denverpaintcontractors.com/">Denver Paint Contractors</a></li><li><a href="https://bouldercopainters.com/">Boulder CO Painters</a></li><li><a href="https://paintingbrighton.com/">Painting Brighton</a></li></ul></div></div><div class="fe"><div>&copy; <span class="yr">2026</span> Painter Hotline. Search Converts LLC. Fully insured. Serving Colorado's Front Range.</div><div>5-year written workmanship warranty</div></div><div class="heart-row"><span class="heart" aria-hidden="true">&#10084;</span> Need a website? <a href="https://eyetoad.com/" rel="noopener">Eye To Ad Media</a></div></div></footer><div class="dock"><a href="tel:+17202085645">Call now</a><a class="hot" href="/virtual-estimate/">Virtual estimate</a></div><script>
+(function(){
+ var bg=document.getElementById('bg'),dr=document.getElementById('dr');
+ if(bg)bg.addEventListener('click',function(){dr.classList.toggle('on');bg.setAttribute('aria-expanded',dr.classList.contains('on'));});
+ document.querySelectorAll('.mg').forEach(function(m){
+  var b=m.querySelector('button');
+  b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('data-o');
+   document.querySelectorAll('.mg').forEach(function(x){x.removeAttribute('data-o');x.querySelector('button').setAttribute('aria-expanded','false');});
+   if(!o){m.setAttribute('data-o','');b.setAttribute('aria-expanded','true');}});
+ });
+ document.addEventListener('click',function(){document.querySelectorAll('.mg').forEach(function(x){x.removeAttribute('data-o');x.querySelector('button').setAttribute('aria-expanded','false');});});
+ var y=document.querySelector('.yr'); if(y)y.textContent=new Date().getFullYear();
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{rootMargin:'0px 0px -7% 0px',threshold:.06});
+  document.querySelectorAll('.rise,.wipe').forEach(function(el){io.observe(el)});
+ } else { document.querySelectorAll('.rise,.wipe').forEach(function(el){el.classList.add('on')}); }
+ document.querySelectorAll('.eml').forEach(function(a){try{var u=atob(a.dataset.u),d=atob(a.dataset.d);a.href='mailto:'+u+'@'+d;a.textContent=u+'@'+d;}catch(e){}});
+ var t0=Date.now(),hit=false;
+ ['keydown','pointerdown'].forEach(function(e){document.addEventListener(e,function(){hit=true;},{once:true});});
+ window.PHL={ready:function(){return Date.now()-t0>=4000&&hit;},
+  post:function(fd,s){var b=document.body;
+   try{var h=atob(b.dataset.h1)+atob(b.dataset.h2),x=atob(b.dataset.u1)+atob(b.dataset.u2)+'@'+atob(b.dataset.d1)+atob(b.dataset.d2);
+    fd.append('_subject',s);fd.append('_captcha','false');
+    return fetch('https://'+h+'/'+x,{method:'POST',body:fd}).then(function(r){return r.ok?'ok':'no'}).catch(function(){return 'no'});
+   }catch(e){return Promise.resolve('no')}}};
+ document.querySelectorAll('form[data-lead]').forEach(function(f){
+  f.addEventListener('submit',function(e){
+   e.preventDefault();
+   var o=f.querySelector('.note'); o.className='note';
+   if(f.querySelector('.pot input').value)return;
+   if(!PHL.ready()){o.className='note no';o.textContent='One moment, then press send again.';return;}
+   var n=f.querySelector('[name="user_name"]'),p=f.querySelector('[name="user_phone"]');
+   if(!n.value.trim()||p.value.replace(/\D/g,'').length<10){o.className='note no';o.textContent='We need your name and a 10-digit phone number.';(n.value.trim()?p:n).focus();return;}
+   var b=f.querySelector('button[type=submit]'),t=b.textContent;b.disabled=true;b.textContent='Sending...';
+   PHL.post(new FormData(f),f.getAttribute('data-subject')).then(function(s){
+    b.disabled=false;b.textContent=t;
+    if(s==='ok'){o.className='note ok';o.textContent='Got it. You will hear from us within one business day.';f.reset();}
+    else{o.className='note no';o.innerHTML='Could not send. Please call <a href="tel:+17202085645">720-208-5645</a>.';}
+   });
+  });
+ });
+})();
+</script><script>
+(function(){
+ var steps=[].slice.call(document.querySelectorAll('.wt-step')),i=0;
+ var fill=document.getElementById('wtFill'),count=document.getElementById('wtCount');
+ function show(n){
+  steps.forEach(function(s,k){s.classList.toggle('live',k===n)});
+  i=n;
+  fill.style.width=Math.round(((n+1)/steps.length)*100)+'%';
+  count.textContent='Step '+(n+1)+' of '+steps.length;
+  var h=steps[n].querySelector('h2'); if(h&&n>0){h.setAttribute('tabindex','-1');h.focus({preventScroll:true});}
+  var top=document.getElementById('wtTop');
+  if(n>0&&top){var y=top.getBoundingClientRect().top+window.scrollY-90;window.scrollTo({top:y,behavior:'smooth'});}
+ }
+ show(0);
+ document.querySelectorAll('[data-next]').forEach(function(b){
+  b.addEventListener('click',function(){
+   var reply=b.getAttribute('data-reply');
+   if(reply){
+    var box=b.closest('.wt-step').querySelector('.wt-reply');
+    if(box){box.innerHTML=reply;box.classList.add('live');
+     var f=b.closest('.wt-step').querySelector('[data-continue]');
+     if(f)f.style.display='inline-flex';
+     b.closest('.wt-opts').querySelectorAll('.wt-opt').forEach(function(o){
+       o.style.opacity=o===b?'1':'.45';o.style.borderColor=o===b?'var(--flame)':'var(--line)';});
+     var hid=document.getElementById('wtAnswers');
+     if(hid)hid.value=(hid.value?hid.value+' | ':'')+b.getAttribute('data-tag');
+     return;}
+   }
+   if(i<steps.length-1)show(i+1);
+  });
+ });
+ document.querySelectorAll('[data-back]').forEach(function(b){
+  b.addEventListener('click',function(){if(i>0)show(i-1);});
+ });
+ var yes=document.getElementById('wtYes'),no=document.getElementById('wtNo');
+ if(yes)yes.addEventListener('click',function(){
+   document.getElementById('wtForm').classList.add('live');
+   document.getElementById('wtWarm').classList.remove('live');
+   document.getElementById('wtChoice').style.display='none';
+   var hid=document.getElementById('wtAnswers'); if(hid)hid.value=(hid.value?hid.value+' | ':'')+'READY: yes';
+   setTimeout(function(){var e=document.getElementById('wtForm');window.scrollTo({top:e.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});},90);
+ });
+ if(no)no.addEventListener('click',function(){
+   document.getElementById('wtWarm').classList.add('live');
+   document.getElementById('wtForm').classList.remove('live');
+ });
+})();
+</script><script src="/ringo.js" defer></script></body></html>
