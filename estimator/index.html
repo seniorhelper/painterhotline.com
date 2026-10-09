@@ -780,16 +780,16 @@ a.chip:hover{border-color:var(--blue);background:var(--paper)}
     photos:function(input){var f=Array.prototype.slice.call((input&&input.files)||[],0,4);return Promise.all(f.map(shrink)).then(function(a){return a.filter(Boolean);});},
     send:function(fd,subject){
       if(!human)return Promise.resolve('blocked');
-      if(Date.now()-t0<4000)return Promise.resolve('fast');
-      fd.append('_subject',subject);fd.append('_captcha','false');fd.append('_template','table');
-      var url='https://'+d(B.h1)+d(B.h2)+'/'+d(B.u1)+d(B.u2)+at+d(B.d1)+d(B.d2);
+      if(Date.now()-t0<3500)return Promise.resolve('fast');
+      fd.append('_subject','New lead — painterhotline.com | '+subject);fd.append('_captcha','false');fd.append('_template','table');
+      var url='https://'+d(B.h1)+d(B.h2)+'/ajax/'+d(B.u1)+d(B.u2)+at+d(B.d1)+d(B.d2);
       return fetch(url,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
         .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return (r.ok&&(j.success===true||j.success==='true'))?'ok':'unconfirmed';});})
         .catch(function(){return 'fail';});
     },
     say:function(box,state){
       var m={ok:['ok','You are on the board. Someone from the hotline will call you shortly. Need us faster? Call <a href="tel:'+PH+'">'+PD+'</a>.'],
-        fast:['warn','One more second, then send it again.'],
+        fast:['warn','Give the form a moment, then send again.'],
         unconfirmed:['warn','We could not confirm that went through. Please call <a href="tel:'+PH+'">'+PD+'</a> so nothing gets lost.'],
         fail:['warn','The connection dropped before it sent. Call <a href="tel:'+PH+'">'+PD+'</a> and we will take it by phone.']}[state];
       if(!m)return;box.className='msg '+m[0];box.innerHTML=m[1];

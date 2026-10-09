@@ -258,18 +258,19 @@ strong{color:var(--ink);font-weight:600}
  document.querySelectorAll('.eml').forEach(function(a){try{var u=atob(a.dataset.u),d=atob(a.dataset.d);a.href='mailto:'+u+'@'+d;a.textContent=u+'@'+d;}catch(e){}});
  var t0=Date.now(),hit=false;
  ['keydown','pointerdown'].forEach(function(e){document.addEventListener(e,function(){hit=true;},{once:true});});
- window.PHL={ready:function(){return Date.now()-t0>=4000&&hit;},
+ window.PHL={ready:function(){return Date.now()-t0>=3500&&hit;},
   post:function(fd,s){var b=document.body;
    try{var h=atob(b.dataset.h1)+atob(b.dataset.h2),x=atob(b.dataset.u1)+atob(b.dataset.u2)+'@'+atob(b.dataset.d1)+atob(b.dataset.d2);
-    fd.append('_subject',s);fd.append('_captcha','false');
-    return fetch('https://'+h+'/'+x,{method:'POST',body:fd}).then(function(r){return r.ok?'ok':'no'}).catch(function(){return 'no'});
+    fd.append('_subject','New lead — painterhotline.com | '+s);fd.append('_captcha','false');fd.append('_template','table');
+    return fetch('https://'+h+'/ajax/'+x,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){return (r.ok&&(j.success===true||j.success==='true'))?'ok':'no';});}).catch(function(){return 'no'});
    }catch(e){return Promise.resolve('no')}}};
+ PHL.send=function(fd,s){return PHL.ready()?PHL.post(fd,s).then(function(r){return r==='ok'?'ok':'unconfirmed';}):Promise.resolve('fast');};
  document.querySelectorAll('form[data-lead]').forEach(function(f){
   f.addEventListener('submit',function(e){
    e.preventDefault();
    var o=f.querySelector('.note'); o.className='note';
    if(f.querySelector('.pot input').value)return;
-   if(!PHL.ready()){o.className='note no';o.textContent='One moment, then press send again.';return;}
+   if(!PHL.ready()){o.className='note no';o.textContent='Give the form a moment, then send again.';return;}
    var n=f.querySelector('[name="user_name"]'),p=f.querySelector('[name="user_phone"]');
    if(!n.value.trim()||p.value.replace(/\D/g,'').length<10){o.className='note no';o.textContent='We need your name and a 10-digit phone number.';(n.value.trim()?p:n).focus();return;}
    var b=f.querySelector('button[type=submit]'),t=b.textContent;b.disabled=true;b.textContent='Sending...';
