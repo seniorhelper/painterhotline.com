@@ -101,7 +101,7 @@
     '.rg-ticket small{display:block;margin-top:8px;color:rgba(255,255,255,.82);font-size:.82rem}',
     '@media (max-width:640px){.rg-panel{right:6px;left:6px;width:auto;bottom:74px;top:60px;height:auto;max-height:none}',
     '.rg-launch{right:4px;bottom:74px}.rg-btn{width:104px;height:120px}.rg-tip{font-size:.84rem;max-width:176px;margin-right:12px}',
-    '.rg-dock{top:150px;bottom:auto;transform:none}.rg-dock button{padding:10px 10px 10px 8px;font-size:.74rem}.rg-dock .mini{width:24px;height:28px}}',
+    '.rg-dock{top:auto;bottom:210px;transform:none}.rg-dock button{padding:10px 10px 10px 8px;font-size:.74rem}.rg-dock .mini{width:24px;height:28px}}',
     '@media (prefers-reduced-motion:reduce){.rg-shake,.rg-ring,.rg-led,.rg-cord{animation:none}}'
   ].join('');
   document.head.appendChild(css);
@@ -190,8 +190,8 @@
     [/\\b(season|when can you|winter|spring|weather|cold|temperature)\\b/i, 'Exteriors run roughly mid-May to early October. Local records put the average last spring freeze near May 5 and the first autumn freeze near October 7, and elevation tightens both ends. What governs a given day is the overnight low, because the film cures after dark. Interiors we do year-round.'],
     [/\\b(lead|1978|old house|historic|asbestos)\\b/i, 'Pre-1978 housing may contain lead paint, and federal EPA rules require certified firms plus containment and verified cleanup when painted surfaces are disturbed. Tell us the year built and it gets planned into the scope rather than discovered mid-project.'],
     [/\\b(insur|licen|bonded|certificate)\\b/i, 'Fully insured, certificate provided at the estimate. Colorado issues no statewide painting licence, so insurance plus a detailed written scope is the whole of your protection.'],
-    [/\\b(brand|sherwin|ppg|benjamin|what paint)\\b/i, 'Sherwin-Williams, PPG and Benjamin Moore. Your estimate names the exact line and sheen per surface, so you can pull the manufacturer data sheet and check it.'],
-    [/\\b(area|serve|where|location|castle rock|longmont|breck|fort morgan|how far)\\b/i, 'Colorado\'s Front Range and the corridors out of it: Castle Rock up to Longmont, west along I-70 into Summit County, and east along I-70 to about Byers and Deer Trail, plus Fort Morgan on planned trips. <a href="/where-we-work/">The real map</a>.'],
+    [/\\b(brand|sherwin|ppg|behr|benjamin|what paint)\\b/i, 'Sherwin-Williams, PPG and Behr. Your estimate names the exact line and sheen per surface, so you can pull the manufacturer data sheet and check it.'],
+    [/\\b(area|serve|where|location|castle rock|longmont|breck|fort morgan|how far)\\b/i, 'Colorado\'s Front Range and the corridors out of it: Castle Rock up to Longmont, west along I-70 into Summit County, and east along I-70 to about Byers and Deer Trail, plus Fort Morgan on planned trips. <a href="/painters-near-me/">The real map</a>.'],
     [/\\b(think about it|get back to you|need time|compare|other (bid|quote))\\b/i, 'Take the time. Compare on four lines rather than the total: the preparation included, the exact product and sheen, the coat count, and the warranty terms. A lower number is nearly always one of those being smaller. Those questions work on anybody, including us.'],
     [/\\b(deposit|payment|financ|pay|invoice)\\b/i, 'A deposit holds your dates and the balance is due at completion, after you walk the work with us. The terms are printed on the written estimate.'],
   ];
