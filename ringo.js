@@ -390,7 +390,7 @@
         '<span class="ln"><span>Scope</span><span>' + (answers.size || answers.scope || '') + '</span></span>' +
         '<span class="ln"><span>Region</span><span>' + (answers.region || '') + '</span></span>' +
         '<span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span>' +
-        '<small>Published 2026 Front Range range for this scope. With 25% off labor on projects booked by November 15, 2026, most of this scope lands around <strong>$' + lod.toLocaleString() + ' - $' + hid.toLocaleString() + '</strong>. Paint and materials are not included in the discount.</small></div>');
+        '<small>Angi’s 2026 Denver range for this scope. With 25% off labor on projects booked by November 15, 2026, most of this scope lands around <strong>$' + lod.toLocaleString() + ' - $' + hid.toLocaleString() + '</strong>. Paint and materials are not included in the discount.</small></div>');
     } else {
       say('<div class="rg-ticket"><b>Walkthrough first</b><span class="ln"><span>Project</span><span>' + (answers.project || '') + '</span></span><span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span><small>Commercial scopes get measured on site so the bid is line-item accurate rather than a guess.</small></div>');
     }
