@@ -182,7 +182,7 @@
     [/\\b(prep|preparation|what.*included|scope|process)\\b/i, 'Exterior: protect everything, pressure wash, scrape to a sound edge, repair substrate, sand transitions, fill, caulk every joint, prime bare and repaired areas, then two finish coats. Interior: cover and protect, patch, match texture, caulk, spot prime, two coats. Each step is itemised by surface on your estimate rather than summarised as prep.'],
     [/\\b(warranty|guarantee|stand behind|if it fails)\\b/i, 'Five years on workmanship, written, with the exclusions actually printed rather than buried. Covers peeling, flaking and adhesion failure from our prep or application. Does not cover normal UV fading, or water arriving from a roof or a sprinkler. Free inspection on any claim. <a href="/our-warranty/">Full terms</a>.'],
     [/\\b(not perfect|mistake|problem|complain|go wrong)\\b/i, 'We are not perfect and we will not pretend we are. Every painting company has a day that goes sideways. What we control is answering the phone when it happens and fixing it without an argument. Same number during the project and after the invoice.'],
-    [/\\b(cost|price|how much|expensive|budget)\\b/i, 'Published 2026 Front Range figures: exteriors roughly $1.55 to $4.10 a square foot, interiors about $1.50 to $3.50, cabinets $2,000 to $8,000 a kitchen. Condition drives it far more than size. Full breakdown on <a href="/what-it-costs/">what it costs</a>, and the 25% off labour runs through October 31.'],
+    [/\\b(cost|price|how much|expensive|budget)\\b/i, 'Angi’s 2026 Denver cost data: exteriors roughly $1.55 to $4.10 a square foot, interiors about $2 to $6, cabinets about $30 to $60 per linear foot. Condition drives it far more than size. Full breakdown on <a href="/what-it-costs/">what it costs</a>, and the 25% off labour runs through November 15.'],
     [/\\b(cabinet|kitchen|oak|spray|refinish)\\b/i, 'The cabinet crew degreases, scuff sands, bonding primes and sprays, with doors done off-site and boxes in place behind containment. Published ranges put refinishing at $2,000 to $8,000 against $15,000 or more to replace, and replacing usually drags countertops with it. <a href="/cabinet-refinishing/">Cabinet crew</a>.'],
     [/\\b(commercial|office|retail|warehouse|hoa|tenant|after hours)\\b/i, 'The commercial crew works nights and weekends and phases a property so only one area is ever out of use. Certificate of insurance before the first day, matched to whatever your manager or board requires. <a href="/commercial-painting/">Commercial crew</a>.'],
     [/\\b(deck|fence|stain|seal|log|timber)\\b/i, 'Pour a cup of water on the boards. Beads means the seal is fine; soaks in means it is time. Clean, brighten to restore the pH, sand where the grain raised, then seal. Stain rather than paint on anything horizontal, because film coatings peel and then need stripping. <a href="/deck-and-fence-staining/">Deck and fence crew</a>.'],
@@ -374,7 +374,7 @@
     prog(.9);
     var c = Q.c || 1, z = Q.z || 1, lo, hi;
     if (Q.t === 'ext') { lo = Q.sq * 1.55 * (Q.h || 1); hi = Q.sq * 4.10 * (Q.h || 1); }
-    else if (Q.t === 'int') { lo = Q.sq * 1.50; hi = Q.sq * 3.50; }
+    else if (Q.t === 'int') { lo = Q.sq * 2.00; hi = Q.sq * 6.00; }
     else if (Q.t === 'cab') { lo = 1800 + (Q.d - 20) * 62; hi = 3600 + (Q.d - 20) * 126; }
     else if (Q.t === 'deck') { lo = Q.sq * 2.10; hi = Q.sq * 4.60; }
     else { lo = 0; hi = 0; }
@@ -390,7 +390,7 @@
         '<span class="ln"><span>Scope</span><span>' + (answers.size || answers.scope || '') + '</span></span>' +
         '<span class="ln"><span>Region</span><span>' + (answers.region || '') + '</span></span>' +
         '<span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span>' +
-        '<small>Published 2026 Front Range range for this scope. With 25% off labor on projects booked by October 31, 2026, most of this scope lands around <strong>$' + lod.toLocaleString() + ' - $' + hid.toLocaleString() + '</strong>. Paint and materials are not included in the discount.</small></div>');
+        '<small>Published 2026 Front Range range for this scope. With 25% off labor on projects booked by November 15, 2026, most of this scope lands around <strong>$' + lod.toLocaleString() + ' - $' + hid.toLocaleString() + '</strong>. Paint and materials are not included in the discount.</small></div>');
     } else {
       say('<div class="rg-ticket"><b>Walkthrough first</b><span class="ln"><span>Project</span><span>' + (answers.project || '') + '</span></span><span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span><small>Commercial scopes get measured on site so the bid is line-item accurate rather than a guess.</small></div>');
     }
