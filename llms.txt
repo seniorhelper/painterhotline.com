@@ -1,24 +1,28 @@
 # Painter Hotline
 
-> A Colorado painting company (trade name of Search Converts LLC) with separate crews for interior, exterior, kitchen cabinet, commercial, deck and fence, and specialty coating work. Great painters, and we 100% stand behind every job. Over 20 years of Colorado experience, fully insured, Sherwin-Williams, PPG and Behr products, a written industry-leading 5-year workmanship warranty, and free estimates, usually returned within 24 hours from photos.
+> A Colorado painting company (trade name of Search Converts LLC) with separate crews for interior, exterior, kitchen cabinet, commercial, deck and fence, and specialty coating work. Great painters, and we 100% stand behind every job. Over 20 years of Colorado experience, fully insured, painting with all major brands (Sherwin-Williams, Benjamin Moore, Behr, Valspar, PPG and others), a written industry-leading 5-year workmanship warranty, and free estimates, usually returned within 24 hours from photos.
 
 Phone: 720-208-5645
 Service area: Colorado's Front Range, 47 cities and towns. Castle Rock north to Longmont, east along I-70 to about Byers and Deer Trail and along I-76 to Fort Morgan, and west on I-70 through Summit County to Breckenridge.
-Current offer: 25% off labor on projects booked by November 15, 2026. Paint and materials not included.
+Current offer: 25% off the labor on painting projects booked by December 31, 2026. Paint and materials not included.
 
 ## Crews
 - [Interior crew](https://painterhotline.com/interior-painting/): Walls, ceilings, trim, stairwells and basements, year-round.
-- [Winter interior painting](https://painterhotline.com/winter-interior-painting/): How interiors are painted in a Colorado winter (heat, EPA 30-50% humidity guidance, ventilation), Angi Denver room prices, and a room budget planner.
+- [Winter interior painting](https://painterhotline.com/winter-interior-painting/): Book winter interior work (rooms, ceilings, trim, cabinets, drywall repair) with a preferred-week form; how interiors are painted in a Colorado winter while the family lives at home (heat, EPA 30-50% humidity guidance, ventilation).
 - [Exterior crew](https://painterhotline.com/exterior-painting/): Washing, scraping, caulking and priming before any finish coat, scheduled around altitude sun, wind and overnight lows.
-- [Cabinet crew](https://painterhotline.com/cabinet-refinishing/): Degreased, bonding-primed and spray-finished kitchen and bath cabinets.
-- [Commercial crew](https://painterhotline.com/commercial-painting/): After-hours and phased work for retail, offices, warehouses, multi-family and HOA properties.
+- [Cabinet painting](https://painterhotline.com/cabinet-painting/): Kitchen cabinet painting hub with a paint vs. restain vs. replace cost tool (door, drawer and linear-foot counts).
+- [Cabinet refinishing process](https://painterhotline.com/cabinet-refinishing/): Degrease, scuff sand, bonding primer and sprayed enamel, oak grain and countertop details.
+- [Commercial crew](https://painterhotline.com/commercial-painting/): After-hours and phased work for retail, offices, warehouses, multi-family and HOA properties. Commercial specialist site: denvercopainting.com.
 - [Deck and fence crew](https://painterhotline.com/deck-and-fence-staining/): Cleaning, brightening, sanding and penetrating stain.
 - [Specialty coatings crew](https://painterhotline.com/specialty-coatings/): Epoxy floors, elastomeric and masonry coatings, stucco systems, industrial maintenance coatings.
 - [Whole-home repaints](https://painterhotline.com/residential-painting/): Interior, exterior, cabinets and deck on one estimate, with preparation matched to the decade the house was built.
 
 ## Guides and data
 - [Painting a pre-1978 home](https://painterhotline.com/lead-safe-painting/): What the EPA Renovation, Repair and Painting rule requires when you pay to paint an older home, questions to ask a painter, and U.S. Census (ACS 2019-2023, table B25034) shares of homes built before 1980 for 47 Front Range towns and 11 counties.
-- [What it costs](https://painterhotline.com/what-it-costs/): Published 2026 Front Range ranges (exterior about $1.55-$4.10 per sq ft of paintable surface, interior about $2-$6 per sq ft, cabinet refinishing about $2,000-$8,000 per kitchen), a calculator, and what moves a quote.
+- [Interior painting cost calculator](https://painterhotline.com/interior-painting-cost/): Room-by-room typical range (size, ceiling height, ceilings, trim, wall condition, color change); exact price after estimate.
+- [Color picker](https://painterhotline.com/colors/): Original palettes by room (living room, bedroom, kitchen and cabinets, exterior), light-direction and undertone guide.
+- [Painting guides](https://painterhotline.com/guides/): Sleeping in a freshly painted room, ceiling color, why touch-up paint shows.
+- [What it costs](https://painterhotline.com/what-it-costs/): Published 2026 market ranges (not our prices) and what moves a quote. Painter Hotline's own typical prices: interior walls $2.05-$2.25 per sq ft of wall, flat ceilings $1.60-$1.80 per sq ft, baseboards $3.35-$3.45 per linear ft, sprayed cabinet doors $175-$195 each, $870 interior minimum.
 - [How much paint do I need?](https://painterhotline.com/how-much-paint-do-i-need/): Room paint calculator for walls, ceilings, primer and trim (Angi: 300-400 sq ft per gallon), a chart for common room sizes, paint prices and Colorado PaintCare recycling.
 - [How much exterior paint do I need?](https://painterhotline.com/how-much-exterior-paint-do-i-need/): Whole-house exterior paint calculator (perimeter x height, gables, doors, windows, garage doors, trim), a chart for five common house sizes, and coverage from Sherwin-Williams data sheets (exterior acrylic 250-300 sq ft per gallon; elastomeric stucco system 115-160).
 - [How long does it take to paint a house?](https://painterhotline.com/how-long-does-it-take-to-paint-a-house/): Days on site by job (one room about 1 day, typical exterior 3-5 days, cabinets 3-5 days), recoat times from Sherwin-Williams data sheets, NOAA 1991-2020 Denver rain and freeze days by month, and a timeline planner.

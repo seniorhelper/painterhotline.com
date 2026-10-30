@@ -1,8 +1,6 @@
 # painterhotline.com: search engines and AI answer engines are welcome.
 User-agent: *
 Allow: /
-Disallow: /estimator/
-Disallow: /proposal/
 
 # Search and answer engines (named so the policy is explicit)
 User-agent: Googlebot

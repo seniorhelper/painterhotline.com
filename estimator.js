@@ -7,13 +7,13 @@
     company: "Painter Hotline",
     legal: "Search Converts LLC, doing business as Painter Hotline",
     phone: "720-208-5645", tel: "+17202085645",
-    email: "quote@painterhotline.com",
+    email: "quote" + String.fromCharCode(64) + "painterhotline.com",
     site: "painterhotline.com",
     terms: "/terms/",
     logo: "/images/proposal-logo.jpg",
     warranty: "5-year workmanship warranty",
     promoPct: 25,
-    promoLabel: "October booking discount (labor)",
+    promoLabel: "Winter booking discount (labor, booked by Dec 31, 2026)",
     depositPct: 50
   };
 

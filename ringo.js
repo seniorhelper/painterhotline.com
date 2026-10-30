@@ -173,39 +173,55 @@
   /* ---------- knowledge base ---------- */
   var SITE_ID = "painterhotline.com";
   var KB = [
-    [/\\b(referral|find me a painter|match|directory|lead service|are you a painter|do you paint|hotline)\\b/i, 'Great painters, and we 100% stand behind every job. Six specialist crews: interior, exterior, cabinets, commercial, decks and fences, and specialty coatings. Whichever one fits your project is the one that shows up, and the work carries our industry-leading 5-year workmanship warranty, protecting you against anything we could have done better or that wasn\'t done right.'],
-    [/\\b(crew|who does|specialis|specializ|same (guys|people)|subcontract)\\b/i, 'Six separate crews, and they stay in their lane. The cabinet crew sprays every day, so doors come back looking like furniture instead of brushwork. The commercial crew works nights and phases a building. The exterior crew knows what altitude UV and chinook winds do to a coating. Most companies send one crew at everything, and it shows.'],
-    [/\\b(fix|redo|bad (job|paint)|failed|peel|someone else|other painter)\\b/i, 'We get called out for that more than you would think, and it is almost never the paint. It is one of four things skipped before the paint: no wash, no scraping to a sound edge, no primer on bare substrate, or uncaulked joints. We will tell you honestly whether yours can be recoated or has to come off. More on <a href="/fix-a-bad-paint-job/">fixing a bad paint job</a>.'],
-    [/\\b(twice|again|cheap (bid|quote|job)|cheaper|lowest|save money)\\b/i, 'Worth running the numbers. A $6,000 job that skips the prep looks identical to a $9,500 job that does not, for about eighteen months. Then it lifts, and the next painter has to remove it before doing the real work. Six grand, plus removal, plus the proper job. The $3,500 you saved cost about eight. We are rarely the cheapest bid and we would rather say that now.'],
-    [/\\b(virtual|photo|upload|estimate|quote|how long.*(quote|estimate))\\b/i, 'Send photos instead of booking a visit. Four quick questions, upload the pictures, and a written estimate comes back within 24 hours naming every surface, the prep per surface, the product and sheen, the coat count and the warranty. <a href="/virtual-estimate/">Start the virtual estimate</a>.'],
-    [/\\b(walkthrough|tour|how you work|what makes you|why you)\\b/i, 'There is a two-minute walkthrough that covers exactly that: how we are organized, why most paint jobs fail, what doing it twice costs, and what we will and will not promise. It ends with one honest question. <a href="/walkthrough/">Take the walkthrough</a>.'],
-    [/\\b(prep|preparation|what.*included|scope|process)\\b/i, 'Exterior: protect everything, pressure wash, scrape to a sound edge, repair substrate, sand transitions, fill, caulk every joint, prime bare and repaired areas, then two finish coats. Interior: cover and protect, patch, match texture, caulk, spot prime, two coats. Each step is itemised by surface on your estimate rather than summarised as prep.'],
-    [/\\b(warranty|guarantee|stand behind|if it fails)\\b/i, 'Five years on workmanship, written, with the exclusions actually printed rather than buried. Covers peeling, flaking and adhesion failure from our prep or application. Does not cover normal UV fading, or water arriving from a roof or a sprinkler. Free inspection on any claim. <a href="/our-warranty/">Full terms</a>.'],
-    [/\\b(not perfect|mistake|problem|complain|go wrong)\\b/i, 'We are not perfect and we will not pretend we are. Every painting company has a day that goes sideways. What we control is answering the phone when it happens and fixing it without an argument. Same number during the project and after the invoice.'],
-    [/\\b(cost|price|how much|expensive|budget)\\b/i, 'Angi’s 2026 Denver cost data: exteriors roughly $1.55 to $4.10 a square foot, interiors about $2 to $6, cabinets about $30 to $60 per linear foot. Condition drives it far more than size. Full breakdown on <a href="/what-it-costs/">what it costs</a>, and the 25% off labour runs through November 15.'],
-    [/\\b(cabinet|kitchen|oak|spray|refinish)\\b/i, 'The cabinet crew degreases, scuff sands, bonding primes and sprays, with doors done off-site and boxes in place behind containment. Published ranges put refinishing at $2,000 to $8,000 against $15,000 or more to replace, and replacing usually drags countertops with it. <a href="/cabinet-refinishing/">Cabinet crew</a>.'],
-    [/\\b(commercial|office|retail|warehouse|hoa|tenant|after hours)\\b/i, 'The commercial crew works nights and weekends and phases a property so only one area is ever out of use. Certificate of insurance before the first day, matched to whatever your manager or board requires. <a href="/commercial-painting/">Commercial crew</a>.'],
-    [/\\b(deck|fence|stain|seal|log|timber)\\b/i, 'Pour a cup of water on the boards. Beads means the seal is fine; soaks in means it is time. Clean, brighten to restore the pH, sand where the grain raised, then seal. Stain rather than paint on anything horizontal, because film coatings peel and then need stripping. <a href="/deck-and-fence-staining/">Deck and fence crew</a>.'],
-    [/\\b(epoxy|elastomeric|stucco|brick|masonry|industrial|garage floor)\\b/i, 'That is the specialty coatings crew. Different chemistry, different prep, different failure modes. Epoxy floors need mechanical profiling and a moisture test. Masonry needs a coating chosen for vapour permeability, not film thickness. Painting brick is close to permanent and we will talk it through first. <a href="/specialty-coatings/">Specialty coatings</a>.'],
-    [/\\b(season|when can you|winter|spring|weather|cold|temperature)\\b/i, 'Exteriors run roughly mid-May to early October. Local records put the average last spring freeze near May 5 and the first autumn freeze near October 7, and elevation tightens both ends. What governs a given day is the overnight low, because the film cures after dark. Interiors we do year-round.'],
-    [/\\b(lead|1978|old house|historic|asbestos)\\b/i, 'Pre-1978 housing may contain lead paint, and federal EPA rules require certified firms plus containment and verified cleanup when painted surfaces are disturbed. Tell us the year built and it gets planned into the scope rather than discovered mid-project.'],
-    [/\\b(insur|licen|bonded|certificate)\\b/i, 'Fully insured, certificate provided at the estimate. Colorado issues no statewide painting licence, so insurance plus a detailed written scope is the whole of your protection.'],
-    [/\\b(brand|sherwin|ppg|behr|benjamin|what paint)\\b/i, 'Sherwin-Williams, PPG and Behr. Your estimate names the exact line and sheen per surface, so you can pull the manufacturer data sheet and check it.'],
-    [/\\b(area|serve|where|location|castle rock|longmont|breck|fort morgan|how far)\\b/i, 'Colorado\'s Front Range and the corridors out of it: Castle Rock up to Longmont, west along I-70 into Summit County, and east along I-70 to about Byers and Deer Trail, plus Fort Morgan on planned trips. <a href="/painters-near-me/">The real map</a>.'],
-    [/\\b(think about it|get back to you|need time|compare|other (bid|quote))\\b/i, 'Take the time. Compare on four lines rather than the total: the preparation included, the exact product and sheen, the coat count, and the warranty terms. A lower number is nearly always one of those being smaller. Those questions work on anybody, including us.'],
-    [/\\b(deposit|payment|financ|pay|invoice)\\b/i, 'A deposit holds your dates and the balance is due at completion, after you walk the work with us. The terms are printed on the written estimate.'],
+    [/\b(winter|holiday|off.season|this season|book (dates|rooms))\b/i, 'Winter is interior season. The heat stays on, paint comes in warm, and the room order is planned so you keep a bedroom and a kitchen. Book by December 31, 2026 and get 25% off labor (paint and materials not included). Pick your preferred week on the <a href="/winter-interior-painting/#start">winter booking form</a>.'],
+    [/\b(referral|find me a painter|match|directory|lead service|are you a painter|do you paint|hotline)\b/i, 'Great painters, and we 100% stand behind every job. Six specialist crews: interior, exterior, cabinets, commercial, decks and fences, and specialty coatings. Whichever one fits your project is the one that shows up, and the work carries our industry-leading 5-year workmanship warranty, protecting you against anything we could have done better or that wasn\'t done right.'],
+    [/\b(crew|who does|specialis|specializ|same (guys|people)|subcontract)\b/i, 'Six separate crews, and they stay in their lane. The cabinet crew sprays every day, so doors come back looking like furniture instead of brushwork. The commercial crew works nights and phases a building. The exterior crew knows what altitude UV and chinook winds do to a coating. Most companies send one crew at everything, and it shows.'],
+    [/\b(fix|redo|bad (job|paint)|failed|peel|someone else|other painter)\b/i, 'We get called out for that more than you would think, and it is almost never the paint. It is one of four things skipped before the paint: no wash, no scraping to a sound edge, no primer on bare substrate, or uncaulked joints. We will tell you honestly whether yours can be recoated or has to come off. More on <a href="/fix-a-bad-paint-job/">fixing a bad paint job</a>.'],
+    [/\b(twice|again|cheap (bid|quote|job)|cheaper|lowest|save money)\b/i, 'Worth running the numbers. A $6,000 job that skips the prep looks identical to a $9,500 job that does not, for about eighteen months. Then it lifts, and the next painter has to remove it before doing the real work. Six grand, plus removal, plus the proper job. The $3,500 you saved cost about eight. We are rarely the cheapest bid and we would rather say that now.'],
+    [/\b(virtual|photo|upload|estimate|quote|how long.*(quote|estimate))\b/i, 'Send photos instead of booking a visit. Four quick questions, upload the pictures, and a written estimate comes back within 24 hours naming every surface, the prep per surface, the product and sheen, the coat count and the warranty. <a href="/virtual-estimate/">Start the virtual estimate</a>.'],
+    [/\b(walkthrough|tour|how you work|what makes you|why you)\b/i, 'There is a two-minute walkthrough that covers exactly that: how we are organized, why most paint jobs fail, what doing it twice costs, and what we will and will not promise. It ends with one honest question. <a href="/walkthrough/">Take the walkthrough</a>.'],
+    [/\b(prep|preparation|what.*included|scope|process)\b/i, 'Exterior: protect everything, pressure wash, scrape to a sound edge, repair substrate, sand transitions, fill, caulk every joint, prime bare and repaired areas, then two finish coats. Interior: cover and protect, patch, match texture, caulk, spot prime, two coats. Each step is itemised by surface on your estimate rather than summarised as prep.'],
+    [/\b(warranty|guarantee|stand behind|if it fails)\b/i, 'Five years on workmanship, written, with the exclusions actually printed rather than buried. Covers peeling, flaking and adhesion failure from our prep or application. Does not cover normal UV fading, or water arriving from a roof or a sprinkler. Free inspection on any claim. <a href="/our-warranty/">Full terms</a>.'],
+    [/\b(not perfect|mistake|problem|complain|go wrong)\b/i, 'We are not perfect and we will not pretend we are. Every painting company has a day that goes sideways. What we control is answering the phone when it happens and fixing it without an argument. Same number during the project and after the invoice.'],
+    [/\b(cost|price|how much|expensive|budget)\b/i, 'Our own 2026 pricing, premium paint lines: a medium bedroom about $1,150 to $1,275, a 16 by 20 living room about $1,975 to $2,175, sprayed cabinet doors $175 to $195 each, and a one-story 1,800 sq ft exterior about $8,100 to $8,800. Interior jobs have an $870 minimum. Price specific rooms on the <a href="/interior-painting-cost/">interior cost calculator</a> or cabinets on the <a href="/cabinet-painting/">cabinet tool</a>. Projects booked by December 31, 2026 get 25% off labor (paint and materials not included).'],
+    [/\b(cabinets?|kitchen|oak|spray|refinish\w*)\b/i, 'The cabinet crew degreases, scuff sands, bonding primes and sprays, with doors done off-site and boxes in place behind containment. Our price is $175 to $195 per door, $110 to $120 per drawer front and $75 to $80 per linear foot of boxes; HomeAdvisor puts new installed cabinets at $2,003 to $11,053 before countertops. The <a href="/cabinet-painting/">paint, refinish or replace tool</a> runs your numbers.'],
+    [/\b(commercial|office|retail|warehouse|hoa|tenant|after hours)\b/i, 'The commercial crew works nights and weekends and phases a property so only one area is ever out of use. Certificate of insurance before the first day, matched to whatever your manager or board requires. <a href="/commercial-painting/">Commercial crew</a>.'],
+    [/\b(deck|fence|stain|seal|log|timber)\b/i, 'Pour a cup of water on the boards. Beads means the seal is fine; soaks in means it is time. Clean, brighten to restore the pH, sand where the grain raised, then seal. Stain rather than paint on anything horizontal, because film coatings peel and then need stripping. <a href="/deck-and-fence-staining/">Deck and fence crew</a>.'],
+    [/\b(epoxy|elastomeric|stucco|brick|masonry|industrial|garage floor)\b/i, 'That is the specialty coatings crew. Different chemistry, different prep, different failure modes. Epoxy floors need mechanical profiling and a moisture test. Masonry needs a coating chosen for vapour permeability, not film thickness. Painting brick is close to permanent and we will talk it through first. <a href="/specialty-coatings/">Specialty coatings</a>.'],
+    [/\b(season|when can you|winter|spring|weather|cold|temperature)\b/i, 'Exteriors run roughly mid-May to early October. Local records put the average last spring freeze near May 5 and the first autumn freeze near October 7, and elevation tightens both ends. What governs a given day is the overnight low, because the film cures after dark. Interiors we do year-round, and winter is when interior dates are easiest to get. <a href="/winter-interior-painting/">Book winter rooms</a>.'],
+    [/\b(lead|1978|old house|historic|asbestos)\b/i, 'Pre-1978 housing may contain lead paint, and federal EPA rules require certified firms plus containment and verified cleanup when painted surfaces are disturbed. Tell us the year built and it gets planned into the scope rather than discovered mid-project.'],
+    [/\b(insur|licen|bonded|certificate)\b/i, 'Fully insured, certificate provided at the estimate. Colorado issues no statewide painting licence, so insurance plus a detailed written scope is the whole of your protection.'],
+    [/\b(brand|sherwin|ppg|behr|benjamin|what paint)\b/i, 'We paint with all major brands: Sherwin-Williams, Benjamin Moore, Behr, Valspar, PPG and others. Your estimate names the exact line and sheen per surface, so you can pull the manufacturer data sheet and check it.'],
+    [/\b(area|serve|where|location|castle rock|longmont|breck|fort morgan|how far)\b/i, 'Colorado\'s Front Range and the corridors out of it: Castle Rock up to Longmont, west along I-70 into Summit County, and east along I-70 to about Byers and Deer Trail, plus Fort Morgan on planned trips. <a href="/painters-near-me/">The real map</a>.'],
+    [/\b(think about it|get back to you|need time|compare|other (bid|quote))\b/i, 'Take the time. Compare on four lines rather than the total: the preparation included, the exact product and sheen, the coat count, and the warranty terms. A lower number is nearly always one of those being smaller. Those questions work on anybody, including us.'],
+    [/\b(deposit|payment|financ|pay|invoice)\b/i, 'A deposit holds your dates and the balance is due at completion, after you walk the work with us. The terms are printed on the written estimate.'],
+    [/\b(colou?r|undertone|palette|north.facing|south.facing|greige)\b/i, 'Start with the light, not the swatch. North rooms read cooler, south rooms warmer and brighter, east and west change through the day. The <a href="/colors/">color picker</a> has palettes by room and a quick undertone check, and we sample on your own walls before anything is rolled.'],
   ];
 
   function lookup(t) { for (var i = 0; i < KB.length; i++) if (KB[i][0].test(t)) return KB[i][1]; return null; }
+  /* ---------- answer adapter: the only place the chat UI gets answers from.
+     Today it is the knowledge base above. To wire an AI API later, set
+     window.PH_BOT.backend = function (text, ctx) { return fetch(...).then(...) }
+     returning a Promise of an HTML string (or null to fall back to the KB). ---------- */
+  window.PH_BOT = window.PH_BOT || {};
+  window.PH_BOT.site = SITE_ID;
+  window.PH_BOT.ask = function (text, ctx) {
+    var kb = lookup(text);
+    var be = window.PH_BOT.backend;
+    if (typeof be !== 'function') return Promise.resolve(kb);
+    return Promise.resolve().then(function () { return be(text, ctx || { page: location.pathname, site: SITE_ID, kb: kb }); })
+      .then(function (r) { return r || kb; }, function () { return kb; });
+  };
 
   function typed() {
     var inp = document.getElementById('rgIn'), t = inp.value.trim();
     if (!t) return;
     inp.value = ''; say(t, 'me'); log.push('Visitor: ' + t);
     if (capture) { var fn = capture; capture = null; fn(t); return; }
-    var a = lookup(t);
-    say(a || 'I would rather get you a real answer than guess at that one. The fastest path is a rapid quote, or call <a href="tel:' + TEL + '">' + DISP + '</a> and ask a painter directly.');
-    menu();
+    window.PH_BOT.ask(t).then(function (a) {
+      say(a || 'I would rather get you a real answer than guess at that one. The fastest path is a rapid quote, or call <a href="tel:' + TEL + '">' + DISP + '</a> and ask a painter directly.');
+      menu();
+    });
   }
   function menu() {
     opts([{ label: 'Run a rapid quote', hot: true, fn: startQuote },
@@ -247,7 +263,7 @@
       say('Now the next painter has to <strong>remove</strong> the failed coating before they can start, which is work nobody paid for the first time. So you pay for the cheap job, the removal, and then the job done correctly. That is why our preparation is itemized in writing instead of hidden in a lump sum.');
       opts([
         { label: 'Makes sense, price my project', hot: true, fn: startQuote },
-        { label: 'What is in your prep?', fn: function () { say(lookup('prep') || ''); menu(); } },
+        { label: 'What is in your prep?', fn: function () { window.PH_BOT.ask('prep').then(function (a) { say(a || ''); menu(); }); } },
         { label: 'Have someone call me', fn: startCallback }
       ]);
     }, 900);
@@ -373,24 +389,22 @@
   function result() {
     prog(.9);
     var c = Q.c || 1, z = Q.z || 1, lo, hi;
-    if (Q.t === 'ext') { lo = Q.sq * 1.55 * (Q.h || 1); hi = Q.sq * 4.10 * (Q.h || 1); }
-    else if (Q.t === 'int') { lo = Q.sq * 2.00; hi = Q.sq * 6.00; }
-    else if (Q.t === 'cab') { lo = 1800 + (Q.d - 20) * 62; hi = 3600 + (Q.d - 20) * 126; }
-    else if (Q.t === 'deck') { lo = Q.sq * 2.10; hi = Q.sq * 4.60; }
+    if (Q.t === 'ext') { lo = Q.sq * 4.30 * (Q.h || 1); hi = Q.sq * 5.00 * (Q.h || 1); }
+    else if (Q.t === 'int') { lo = Math.max(Q.sq * 3.30, 870); hi = Math.max(Q.sq * 4.20, 870); }
+    else if (Q.t === 'cab') { lo = Q.d * 215; hi = Q.d * 240; }
+    else if (Q.t === 'deck') { lo = Math.max(Q.sq * 3.10, 1250); hi = Math.max(Q.sq * 4.10, 1250); }
     else { lo = 0; hi = 0; }
     Q.ticket = ticket();
     answers.ticket = Q.ticket;
     if (lo) {
       lo = Math.round(lo * c * z / 50) * 50; hi = Math.round(hi * c * z / 50) * 50;
-      var lod = Math.round(lo * .75 / 50) * 50, hid = Math.round(hi * .75 / 50) * 50;
       answers.ballpark = '$' + lo.toLocaleString() + ' - $' + hi.toLocaleString();
-      answers.ballpark_after_discount = '$' + lod.toLocaleString() + ' - $' + hid.toLocaleString();
       say('<div class="rg-ticket"><b>$' + lo.toLocaleString() + ' - $' + hi.toLocaleString() + '</b>' +
         '<span class="ln"><span>Project</span><span>' + (answers.project || '') + '</span></span>' +
         '<span class="ln"><span>Scope</span><span>' + (answers.size || answers.scope || '') + '</span></span>' +
         '<span class="ln"><span>Region</span><span>' + (answers.region || '') + '</span></span>' +
         '<span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span>' +
-        '<small>Angi’s 2026 Denver range for this scope. With 25% off labor on projects booked by November 15, 2026, most of this scope lands around <strong>$' + lod.toLocaleString() + ' - $' + hid.toLocaleString() + '</strong>. Paint and materials are not included in the discount.</small></div>');
+        '<small>Typical Painter Hotline price range for this scope; final price after the estimate. Projects booked by December 31, 2026 get 25% off labor (paint and materials not included).</small></div>');
     } else {
       say('<div class="rg-ticket"><b>Walkthrough first</b><span class="ln"><span>Project</span><span>' + (answers.project || '') + '</span></span><span class="ln"><span>Ticket</span><span>' + Q.ticket + '</span></span><small>Commercial scopes get measured on site so the bid is line-item accurate rather than a guess.</small></div>');
     }
