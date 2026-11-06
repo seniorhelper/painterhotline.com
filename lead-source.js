@@ -28,7 +28,7 @@
   window.fetch = function (url, opts) {
     try {
       var u = typeof url === "string" ? url : (url && url.url) || "";
-      if (/formsubmit\.co\/ajax\//.test(u) && opts && opts.body && typeof FormData !== "undefined" && opts.body instanceof FormData) {
+      if (/clients\.eyetoad\.com\/lead\/send\.php/.test(u) && opts && opts.body && typeof FormData !== "undefined" && opts.body instanceof FormData) {
         var fd = opts.body, s = src || {};
         fd.append("lead_page", location.pathname);
         fd.append("lead_landing_page", s.landing_page || location.pathname);
