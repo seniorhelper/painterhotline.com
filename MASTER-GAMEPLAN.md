@@ -9,6 +9,9 @@ Brand: Painter Hotline, 720-208-5645, trade name of Search Converts LLC. Never l
 - Forms: every lead form (78) posts to the company lead server https://clients.eyetoad.com/lead/send.php with honeypot, 4-second human timer and name + 10-digit phone validation. Test lead 20261108-100338-b96c4d saved on the server. The alert email did NOT reach Gmail within 40 minutes: see Morning to-do 1.
 - Lighthouse mobile (home, before tonight's push): Performance 94, Accessibility 97, Best Practices 100, SEO 100. The one a11y failure (footer credit contrast) is fixed in this push.
 
+## Real search data
+Search Console, last 28 days to Nov 6 (read 2026-11-08): 0 clicks, 532 impressions, average position 55. Top impression queries: interior house painting cost calculator (56), how long does it take to paint a house, painting company near me, residential painter near me, painter answering service, house painters twin lakes co, residential painting broomfield. Read: the site is seen but not trusted; trust signals (GBP, reviews, local links) come before more pages.
+
 ## Keyword targets (one owner per term)
 | Term | Owner page | Real SERP seen 2026-11-08 |
 |---|---|---|
