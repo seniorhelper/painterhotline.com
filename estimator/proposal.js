@@ -365,7 +365,7 @@
     if (Date.now() - t0 < 4000) return Promise.resolve("fast");
     var hp = fd.get("_honey"); if (hp) return Promise.resolve("blocked");
     var B = document.body.dataset, at = String.fromCharCode(64);
-    fd.set("_subject", subject); fd.set("_captcha", "false"); fd.set("_template", "table");
+    fd.set("_subject", subject);
     var url = "https://" + d64(B.h1) + d64(B.h2) + "/ajax/" + d64(B.u1) + d64(B.u2) + at + d64(B.d1) + d64(B.d2);
     return fetch(url, { method: "POST", body: fd, headers: { Accept: "application/json" } })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return (r.ok && (j.success === true || j.success === "true")) ? "ok" : "unconfirmed"; }); })
