@@ -46,3 +46,9 @@ Gap everyone leaves open: dated, cited price ranges; temperature limits with a m
 
 ## Rules carried forward
 White-hat only. No city-swapped pages, no fake reviews, no self-serving review schema, one nofollow eyetoad credit per page, no followed sitewide links. Every stat needs a URL and a checked date. Run `site-security-check` scan on the folder and the live URL before and after every push.
+
+## 2026-11-10 (overnight, branch seo-leads-2026-11-10, not pushed)
+- NEW /guides/epoxy-garage-floor-cost-colorado/ (about 1,650 words). Why: GSC showed ~171 impressions for epoxy garage floor cost / coating cost queries (Franktown, Kiowa, Castle Pines, Lone Tree, Arapahoe/Elbert county, Longmont) at positions 38-50, and /epoxy-garage-floors/ has no prices. No town prices invented, no town pages.
+- Sources opened live 2026-11-10: Angi epoxy flooring cost (updated Oct 30, 2026: national avg $2,526, typical $1,650-$3,494, $2-$12/sq ft, Aurora CO $1,651-$3,614 avg $2,606, two-car 500 sq ft $1,500-$6,000, patching $25-$250, resurfacing $1,000-$5,000); Bob Vila polyaspartic $4-$9/sq ft (updated Jan 2024); Rust-Oleum EpoxyShield water-based TDS ESH-39 (60-85F, vehicle 3 days); APF Polyaspartic 7500 PDS 10.31.25 (50-85F, cures to 40F, vehicle ~24 h, no kerosene/propane heaters); CDOT 2012 release (liquid magnesium chloride). HomeAdvisor and Fixr epoxy pages returned 403/404.
+- /epoxy-garage-floors/ now links to the guide in "What moves the price" (dateModified 2026-11-10). Added to /guides/ (card + ItemList), sitemap, llms.txt.
+- Open item: /epoxy-garage-floors/ says EPA puts UV at "about 6% per 1,000 meters (about 2% per 1,000 feet)"; WHO says ~10% per 1,000 m. Not changed tonight.
